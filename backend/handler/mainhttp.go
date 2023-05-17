@@ -7,7 +7,7 @@ import (
 	"github.com/gin-contrib/sessions/cookie"
 	"github.com/gin-gonic/gin"
 
-	au "github.com/SG143s/DesireGarden/auth"
+	au "github.com/SG143s/kweekStop/auth"
 )
 
 func Start() {

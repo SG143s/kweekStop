@@ -1,4 +1,4 @@
-module github.com/SG143s/DesireGarden
+module github.com/SG143s/kweekStop
 
 go 1.20
 
