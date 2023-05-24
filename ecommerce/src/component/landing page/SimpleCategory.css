@@ -1,0 +1,47 @@
+.simple-categories {
+    padding-top: 40px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    position: center;
+    margin: auto;
+}
+
+.simple-cat-clothing,
+.simple-cat-hp,
+.simple-cat-bathroom,
+.simple-cat-garden,
+.simple-cat-diy {
+    height: 50px;
+    color: white;
+    font-size: 14px;
+    width: 200px;
+    text-align: left;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.simple-categories p {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.simple-cat-clothing {
+    background-color: rgb(253, 69, 11);
+}
+
+.simple-cat-hp {
+    background-color: rgb(253, 156, 11);
+}
+
+.simple-cat-bathroom {
+    background-color: rgb(11, 108, 253);
+}
+
+.simple-cat-garden {
+    background-color: rgb(117, 11, 253);
+}
+
+.simple-cat-diy {
+    background-color: rgb(253, 11, 69);
+}
