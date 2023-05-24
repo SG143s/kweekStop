@@ -1,0 +1,85 @@
+.navbar-header,
+.navbar-menu,
+.search-bar,
+.navbar-categories-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-header {
+    /* background-color: antiquewhite; */
+}
+
+button {
+    cursor: pointer;
+}
+
+.navbar-header {
+    margin: 25px 25px 25px 100px;
+}
+
+.navbar-menu p {
+    margin: 5px 25px 0px 50px;
+}
+
+.navbar-categories-menu p svg {
+    margin-left: 10px;
+    transform: translateY(4px);
+}
+
+
+.search-bar input {
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    width: 300px;
+    height: 35px;
+    padding-left: 17px;
+    border-right: none;
+    border: none;
+    background-color: rgb(245, 245, 245);
+}
+
+.searcgh-bar {
+    margin-right: 45px;
+}
+
+.search-bar .search-button {
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    height: 35px;
+    border-left: none;
+    width: 30px;
+    background-color: rgb(253, 156, 11);
+    color: white;
+    border: none;
+}
+
+.navbar-right-side .cart {
+    background-color: white;
+    border: none;
+    transform: scale(1.5);
+    margin-top: 10px;
+}
+
+.navbar-right-side .login-signup {
+    margin-left: 100px;
+}
+
+.login-signup button {
+    border-radius: 40px;
+    padding: 7px 40px 7px 40px;
+    margin-right: 20px;
+    border-color:rgb(253, 156, 11);
+    font-weight: 700;
+    box-shadow: none;
+}
+
+.login-signup .login {
+    color: rgb(253, 156, 11);
+    background-color: white;
+}
+
+.login-signup .signup {
+    color:rgb(245, 245, 245);
+    background-color: rgb(253, 156, 11);
+}
