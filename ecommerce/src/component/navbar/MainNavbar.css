@@ -15,11 +15,12 @@ button {
 }
 
 .navbar-header {
-    margin: 25px 25px 25px 100px;
+    margin: 20px 20px 20px 90px;
 }
 
 .navbar-menu p {
     margin: 5px 25px 0px 50px;
+    font-size: 14px;
 }
 
 .navbar-categories-menu p svg {
@@ -32,21 +33,26 @@ button {
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
     width: 300px;
-    height: 35px;
+    height: 25px;
     padding-left: 17px;
     border-right: none;
     border: none;
     background-color: rgb(245, 245, 245);
 }
 
-.searcgh-bar {
+input, input:focus, input:hover, input:active {
+    outline: none;
+    box-shadow:none;
+}
+
+.search-bar {
     margin-right: 45px;
 }
 
 .search-bar .search-button {
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
-    height: 35px;
+    height: 25px;
     border-left: none;
     width: 30px;
     background-color: rgb(253, 156, 11);
@@ -58,7 +64,6 @@ button {
     background-color: white;
     border: none;
     transform: scale(1.5);
-    margin-top: 10px;
 }
 
 .navbar-right-side .login-signup {
@@ -67,11 +72,20 @@ button {
 
 .login-signup button {
     border-radius: 40px;
-    padding: 7px 40px 7px 40px;
+    padding: 5px 40px 5px 40px;
     margin-right: 20px;
     border-color:rgb(253, 156, 11);
     font-weight: 700;
     box-shadow: none;
+}
+
+button.cart {
+    margin-top: 7px;
+}
+
+button, button:focus, button:hover, button:active {
+    outline: none;
+    box-shadow:none;
 }
 
 .login-signup .login {
@@ -82,4 +96,15 @@ button {
 .login-signup .signup {
     color:rgb(245, 245, 245);
     background-color: rgb(253, 156, 11);
+}
+
+.navbar-line hr {
+    border: none;
+    /* height: 20px; */
+    /* width: 90%; */
+    height: 45px;
+    margin-top: 0;
+    border-bottom: 1px solid yellow;
+    box-shadow: 0 20px 20px -20px rgb(253, 156, 11);
+    margin: -50px auto 10px; 
 }

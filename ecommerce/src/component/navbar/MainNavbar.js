@@ -1,15 +1,16 @@
 import "./MainNavbar.css";
 import { FaAngleDown } from 'react-icons/fa';
 import { FaSistrix } from 'react-icons/fa';
-import { FaShoppingCart } from 'react-icons/fa';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 import MainLogo from '../png components/Main Logo.png';
 
 const MainNavbar = (props) => {
 
   return (
+    <div>
       <div className="navbar-header">
         <div className="main-logo">
-          <img src={MainLogo} width='200px' />
+          <img src={MainLogo} width='150px' />
         </div>
         <div className="navbar-menu">
           <div className="navbar-categories-menu">
@@ -27,14 +28,17 @@ const MainNavbar = (props) => {
         </form>
         </div>
         <div className="navbar-right-side">
-          <button className="cart"><FaShoppingCart /></button>
+          <button className="cart"><AiOutlineShoppingCart/></button>
         </div>
         <div className="login-signup">
           <button className="login">Log in</button>
           <button className="signup">Sign Up</button>
         </div>
-
       </div>
+      <div className="navbar-line">
+        <hr></hr>
+      </div>
+    </div>
   );
 };
 
