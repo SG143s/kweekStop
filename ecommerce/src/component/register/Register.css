@@ -1,0 +1,89 @@
+.register-header {
+    width: 25%;
+    position: center;
+    margin: auto;
+    box-shadow: 1px 1px 3px 1px rgb(214, 214, 214);
+    border-radius: 10px;
+    height: 500px;
+    margin-top: 70px;
+    margin-bottom: 60px;
+}
+
+.register-header-container .input-register p.password-notes {
+    font-weight: 100;
+    font-size: 12px;
+    color: rgb(85, 85, 85);
+}
+
+.register-header-container {
+    padding: 20px 70px 50px 70px;
+    text-align: left;
+}
+
+.register-header p.header {
+    font-size: 20px;
+    font-weight: bolder;
+    /* text-align: left; */
+}
+
+.register-header-container .input-register p {
+    /* text-align: left; */
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+.register-header-container .input-register input {
+    border-radius: 5px;
+    width: 230px;
+    /* border-color: gray; */
+    padding: 3px;
+    padding-left: 10px;
+    margin-top: 4px;
+}
+
+.register-header-container .input-register button {
+    margin-top: 10px;
+    width: 250px;
+    background-color: rgb(253, 156, 11);
+    border-radius: 3px;
+    border: none;
+    padding-top: 7px;
+    padding-bottom: 6px;
+}
+
+input {
+    border: 1px rgb(160, 160, 160) solid;
+}
+
+a {
+    color: rgb(0, 102, 192);
+}
+
+.register-header .detail,
+.register-header .have-account {
+    font-size: 12px;
+}
+
+.register-header .detail {
+    margin-top: 30px;
+}
+
+.register-footer .help {
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+    position: center;
+    margin: auto;
+    font-size: 10px;
+    color: rgb(0, 102, 192);
+}
+
+.register-footer .cr {
+    font-size: 10px;
+}
+
+.register-footer hr {
+    box-shadow: 1px 1px 3px 0px rgb(160, 160, 160);
+}
+

@@ -21,7 +21,7 @@ const Login = (props) => {
                         <p>By creating an account, you agree to Kweekstop’s <a>Conditions of Use </a> and <a>Privacy Notice.</a></p>
                     </div>
                     <div className="have-account">
-                        <p>Already have an account? <a>Sign in</a></p>
+                        <p>New Customer? <a>Sign up</a></p>
                     </div>
                 </div>
             </div>
