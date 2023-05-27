@@ -1,7 +1,8 @@
-import ProductImage from '../png components/products/A white electronic device with a game controller on it..png'
+// import ProductImage from '../png components/products/A white electronic device with a game controller on it..png'
 import { AiFillStar } from "react-icons/ai";
 import './ProductGroup.css';
 import React from "react";
+import Image from 'next/image';
 
 const ThumbnailProduct = ({product}) => {
     return (
@@ -9,7 +10,7 @@ const ThumbnailProduct = ({product}) => {
             {product.map((p) => (
                 <div className='product-review'>
                     <div className="product-img">
-                        <img src={ProductImage} width='120px' />
+                        <Image src="/png components/products/A white electronic device with a game controller on it..png" width={120} height={95} />
                     </div>
                     <div className="product-detail">
                         <p className='product-name'>{p.productname}</p>

@@ -1,8 +1,9 @@
-import EmojiFire from '../png components/emoji fire.png';
+// import EmojiFire from '../png components/emoji fire.png';
 import './ProductGroup.css';
 import { useState } from "react";
 import ThumbnailProduct from './ThumbnailProduct';
 import React from "react";
+import Image from 'next/image';
 
 const ProductGroup = ({titleGroup}) => {
     const [product] = useState([
@@ -21,7 +22,7 @@ const ProductGroup = ({titleGroup}) => {
         <div>
             <div className="productgroup-container">
                 <div className="title">
-                    <p className='group-name'>{titleGroup} <img src={EmojiFire} width='10px' /></p>
+                    <p className='group-name'>{titleGroup} <Image src="/png components/emoji fire.png" width={10} height={13} /></p>
                     <div className='thumbnail-products'>
                         <ThumbnailProduct product={product}></ThumbnailProduct>
                     </div>

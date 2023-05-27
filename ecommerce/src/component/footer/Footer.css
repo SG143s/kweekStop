@@ -42,6 +42,12 @@
 .text-footer {
     background-color: rgb(51, 48, 48);
     color: rgb(109, 117, 136);
-    padding: 1px 0px 1px 0px;
+    padding: 0px 5px 0px 5px;
     font-size: 15px;
+    transform: translateY(10px);
+}
+
+.text-footer p.made-with-luv {
+    font-size: 10px;
+    padding: 5px 0px 5px 0px;
 }

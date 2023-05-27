@@ -22,8 +22,8 @@ const LandingPage = (props) => {
             </div>
             <div className="footer">
                 <JoinUs></JoinUs>
-                <TextFooter></TextFooter>
             </div>
+            <TextFooter></TextFooter>
         </div>
     )
 };

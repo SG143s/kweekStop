@@ -2,7 +2,8 @@ import "./MainNavbar.css";
 import { FaAngleDown } from 'react-icons/fa';
 import { FaSistrix } from 'react-icons/fa';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
-import MainLogo from '../png components/Main Logo.png';
+import Image from 'next/image';
+// import MainLogo from '../png components/Main Logo.png';
 
 const MainNavbar = (props) => {
 
@@ -10,7 +11,7 @@ const MainNavbar = (props) => {
     <div>
       <div className="navbar-header">
         <div className="main-logo">
-          <img src={MainLogo} width='150px' />
+          <Image src="/png components/Main Logo.png" width={150} height={30} />
         </div>
         <div className="navbar-menu">
           <div className="navbar-categories-menu">
