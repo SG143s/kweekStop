@@ -6,8 +6,8 @@ import (
 
 var db = hand.GetDB()
 
-func checkEmail(email string) bool {
-	result, err := db.Query("SELECT EXISTS(SELECT 1 FROM users WHERE email =? LIMIT 1)", email)
+func checkUsName(uname string) bool {
+	result, err := db.Query("SELECT EXISTS(SELECT 1 FROM users WHERE username =? LIMIT 1)", uname)
 	if err != nil {
 		panic(err)
 	}
@@ -22,9 +22,9 @@ func checkEmail(email string) bool {
 	return res
 }
 
-func getIdMail(mail string) string {
+func getIdUname(uname string) string {
 	var id string
-	row, err := db.Query("SELECT iduser FROM users where email = ?", mail)
+	row, err := db.Query("SELECT iduser FROM users where username = ?", uname)
 	if err != nil {
 		panic(err)
 	}
@@ -55,10 +55,10 @@ func getPass(id string) string {
 }
 
 func CheckAuth(em string, ps string) bool {
-	if !checkEmail(em) {
+	if !checkUsName(em) {
 		return false
 	}
-	id := getIdMail(em)
+	id := getIdUname(em)
 
 	psc := getPass(id)
 

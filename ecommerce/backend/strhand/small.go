@@ -8,7 +8,7 @@ type userTop struct {
 }
 
 type LogInf struct {
-	Email    string `json:"lemail"`
+	Username string `json:"luname"`
 	Password string `json:"lpass"`
 }
 

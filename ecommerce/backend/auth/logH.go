@@ -15,7 +15,7 @@ func LogIn(c *gin.Context) {
 		c.JSON(400, gin.H{"error": "Invalid request"})
 		return
 	}
-	if !sqop.CheckAuth(user.Email, user.Password) {
+	if !sqop.CheckAuth(user.Username, user.Password) {
 		c.JSON(401, gin.H{"error": "Invalid email or password"})
 		return
 	}
