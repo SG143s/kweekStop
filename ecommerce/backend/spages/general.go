@@ -17,4 +17,5 @@ func PaHome(c *gin.Context) {
 	} else {
 		pjson.Prof = sqop.GetUserIn(session.Get("userId").(string))
 	}
+	c.JSON(200, pjson)
 }
