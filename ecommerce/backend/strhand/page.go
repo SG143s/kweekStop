@@ -12,6 +12,12 @@ type Home struct {
 	Cheaprod []prodSim `json:"chprod"`
 }
 
+type ProdP struct {
+	Base  prodCom   `json:"pcom"`
+	RelIt []prodSim `json:"rprod"`
+	Rev   []reviews `json:"prev"`
+}
+
 type Shop struct {
 	Prof  UserTop   `json:"profile"`
 	Sh    shopCom   `json:"shopD"`
