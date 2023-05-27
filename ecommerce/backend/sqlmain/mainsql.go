@@ -6,14 +6,6 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
-type loginInfo struct {
-	User     string `json:"user"`
-	Password string `json:"password"`
-	Ip       string `json:"ip"`
-	Port     string `json:"port"`
-	Db       string `json:"database"`
-}
-
 var db sql.DB
 
 func SqlStart() {

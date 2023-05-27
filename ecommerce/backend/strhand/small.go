@@ -7,6 +7,11 @@ type userTop struct {
 	ProfilePic string `json:"prpic"`
 }
 
+type LogInf struct {
+	Email    string `json:"lemail"`
+	Password string `json:"lpass"`
+}
+
 type prodSim struct {
 	ID       string  `json:"pid"`
 	Name     string  `json:"pname"`

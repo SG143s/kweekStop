@@ -3,7 +3,7 @@ package sqlop
 import (
 	"database/sql"
 
-	hand "github.com/SG143s/kweekStop/ecommerce/handler"
+	hand "github.com/SG143s/kweekStop/ecommerce/sqlmain"
 )
 
 func getprodsim() *sql.Rows {
