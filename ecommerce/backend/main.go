@@ -1,10 +1,11 @@
 package main
 
 import (
-	hand "github.com/SG143s/kweekStop/handler"
+	hthand "github.com/SG143s/kweekStop/ecommerce/handler"
+	sqhand "github.com/SG143s/kweekStop/ecommerce/sqlmain"
 )
 
 func main() {
-	hand.StartMongo()
-	hand.Start()
+	sqhand.SqlStart()
+	hthand.Start()
 }
