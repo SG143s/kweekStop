@@ -20,6 +20,7 @@ func LogIn(c *gin.Context) {
 		return
 	}
 	session.Set("loggedIn", true)
+	session.Set("userId", sqop.GetIdUname(user.Username))
 	session.Save()
 	c.Redirect(302, "/")
 }

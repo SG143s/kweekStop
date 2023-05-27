@@ -4,7 +4,7 @@ type Profile struct {
 }
 
 type Home struct {
-	Prof     userTop   `json:"profile"`
+	Prof     UserTop   `json:"profile"`
 	PopCat   []catLink `json:"popcats"`
 	Popprod  []prodSim `json:"poprod"`
 	Newprod  []prodSim `json:"newprod"`
@@ -13,7 +13,7 @@ type Home struct {
 }
 
 type Shop struct {
-	Prof  userTop   `json:"profile"`
+	Prof  UserTop   `json:"profile"`
 	Sh    shopCom   `json:"shopD"`
 	SProd []prodSim `json:"sProd"`
 }

@@ -1,6 +1,6 @@
 package strhand
 
-type userTop struct {
+type UserTop struct {
 	Log        bool   `json:"logio"`
 	ID         string `json:"uid"`
 	UserName   string `json:"uname"`
