@@ -22,7 +22,7 @@ func checkUsName(uname string) bool {
 	return res
 }
 
-func getIdUname(uname string) string {
+func GetIdUname(uname string) string {
 	var id string
 	row, err := db.Query("SELECT iduser FROM users where username = ?", uname)
 	if err != nil {
@@ -58,7 +58,7 @@ func CheckAuth(em string, ps string) bool {
 	if !checkUsName(em) {
 		return false
 	}
-	id := getIdUname(em)
+	id := GetIdUname(em)
 
 	psc := getPass(id)
 
