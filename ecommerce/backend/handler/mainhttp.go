@@ -37,7 +37,7 @@ func Start() {
 			fmt.Println("Ada Error oe")
 		}
 	})
-	r.GET("/login", au.LogIn)
+	r.POST("/login", au.LogIn)
 	r.GET("/logout", au.LogOut)
 	r.Run(":8000")
 }
