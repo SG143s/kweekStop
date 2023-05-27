@@ -10,7 +10,7 @@ import (
 
 func PaHome(c *gin.Context) {
 	session := sessions.Default(c)
-	var pjson strs.Shop
+	var pjson strs.Home
 	logIn := session.Get("loggedIn")
 	if logIn == false {
 		pjson.Prof.Log = false
