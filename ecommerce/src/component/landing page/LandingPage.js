@@ -22,8 +22,13 @@ const LandingPage = (props) => {
             </div>
             <div className="footer">
                 <JoinUs></JoinUs>
+<<<<<<< HEAD
             </div>
             <TextFooter></TextFooter>
+=======
+                <TextFooter></TextFooter>
+            </div>
+>>>>>>> e653d0420d8024abda3e13e992abbc9ec873e8d1
         </div>
     )
 };
