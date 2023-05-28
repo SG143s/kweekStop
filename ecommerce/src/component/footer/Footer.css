@@ -46,6 +46,46 @@
     font-size: 15px;
     transform: translateY(10px);
 }
+.footer-detail-join {
+    text-align: left;
+    width: 70%;
+    pointer: center;
+    margin: auto;
+    padding-bottom: 75px;
+}
+
+.footer-detail-join p.title {
+    color: rgb(255, 166, 23);
+    font-weight: bolder;
+    font-size: 25px;
+    margin-top: 4px;
+}
+
+.footer-detail-join p.detail {
+    color: rgb(109, 117, 136);
+    margin-top: -10px;
+}
+
+.footer-button button {
+    border-radius: 10px;
+    border: none;
+    margin-right: 30px;
+    margin-top: 5px;
+    padding: 10px 17px 10px 17px;
+    font-size: 13px;
+}
+
+.footer-button button.open-a-shop {
+    background-color: rgb(255, 166, 23);
+    font-weight: bold;
+    color: white;
+}
+
+.footer-button button.learn-more {
+    color: rgb(255, 166, 23);
+    font-weight: bold;
+    background-color: white;
+}
 
 .text-footer p.made-with-luv {
     font-size: 10px;
