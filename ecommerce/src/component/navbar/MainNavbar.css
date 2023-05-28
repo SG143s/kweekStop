@@ -105,10 +105,6 @@ button, button:focus, button:hover, button:active {
     height: 45px;
     margin-top: 0;
     border-bottom: 1px solid yellow;
-<<<<<<< HEAD
     box-shadow: 1px 12px 20px -20px rgb(122, 122, 122);
-=======
-    box-shadow: 0 20px 20px -20px rgb(253, 156, 11);
->>>>>>> e653d0420d8024abda3e13e992abbc9ec873e8d1
     margin: -50px auto 10px; 
 }
