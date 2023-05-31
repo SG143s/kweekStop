@@ -8,7 +8,7 @@ func Getrandcat() []strs.CatLink {
 	var t1 strs.CatLink
 	var t2 []strs.CatLink
 
-	row, err := db.Query("ifnull((SELECT * FROM category ORDER BY RAND() LIMIT 10), 'path')")
+	row, err := db.Query("SELECT * FROM category ORDER BY RAND() LIMIT 10")
 	if err != nil {
 		panic(err)
 	}
