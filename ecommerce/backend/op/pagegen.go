@@ -1,7 +1,7 @@
 package op
 
 import (
-	sq "github.com/SG143s/kweekStop/ecommerce/sqlop"
+	sq "github.com/SG143s/kweekStop/ecommerce/sqlmain"
 	strs "github.com/SG143s/kweekStop/ecommerce/strhand"
 )
 
