@@ -15,8 +15,8 @@ type LogInf struct {
 type ProdSim struct {
 	ID       string  `json:"pid"`
 	Name     string  `json:"pname"`
-	Price    int     `json:"orprice"`
-	DisPrice int     `json:"discprice"`
+	Price    float32 `json:"orprice"`
+	DisPrice float32 `json:"discprice"`
 	Category string  `json:"pcat"`
 	Rating   float32 `json:"prate"`
 	SReview  int     `json:"psrev"`
