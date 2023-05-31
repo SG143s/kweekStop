@@ -13,10 +13,15 @@ type LogInf struct {
 }
 
 type ProdSim struct {
+	Base     ProdBase `json:"base"`
+	Imgpath  string   `json:"imgpath"`
+	DisPrice float32  `json:"discprice"`
+}
+
+type ProdBase struct {
 	ID       string  `json:"pid"`
 	Name     string  `json:"pname"`
 	Price    float32 `json:"orprice"`
-	DisPrice float32 `json:"discprice"`
 	Category string  `json:"pcat"`
 	Rating   float32 `json:"prate"`
 	SReview  int     `json:"psrev"`
@@ -41,10 +46,11 @@ type shopSim struct {
 	Rate float32 `json:"srate"`
 }
 
-type prodCom struct {
-	Base ProdSim `json:"pbase"`
-	Desc string  `json:"pdesc"`
-	Shop shopSim `json:"sbase"`
+type ProdCom struct {
+	Base     ProdBase `json:"pbase"`
+	Imgpaths []string `json:"imgpaths"`
+	Desc     string   `json:"pdesc"`
+	Shop     shopSim  `json:"sbase"`
 }
 
 type shopCom struct {
