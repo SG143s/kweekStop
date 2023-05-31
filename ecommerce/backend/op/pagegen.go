@@ -13,3 +13,9 @@ func HomeGen(base strs.Home) strs.Home {
 
 	return base
 }
+
+func ProdGen(base strs.Prods, sort string) strs.Prods {
+	base.Prod = sq.Getallprod(sort)
+
+	return base
+}

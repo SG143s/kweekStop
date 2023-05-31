@@ -34,13 +34,78 @@ func Getpoprod() []strs.ProdSim {
 	}
 
 	for row.Next() {
-		err := row.Scan(&t1.ID, &t1.Name, &t1.Price, &t1.Category, &t1.Rating, &t1.SReview)
+		err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview)
 		if err != nil {
 			panic(err)
 		}
-		t1.DisPrice = t1.Price
+		t1.DisPrice = t1.Base.Price
 		t2 = append(t2, t1)
 	}
+	return t2
+}
+
+func Getallprod(sort string) []strs.ProdSim {
+	var t1 strs.ProdSim
+	var t2 []strs.ProdSim
+
+	if sort == "-" {
+		row, err := db.Query("CALL getallprod()")
+		if err != nil {
+			panic(err)
+		}
+
+		for row.Next() {
+			err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview)
+			if err != nil {
+				panic(err)
+			}
+			t1.DisPrice = t1.Base.Price
+			t2 = append(t2, t1)
+		}
+	} else if sort == "ch" {
+		row, err := db.Query("CALL sortchprod()")
+		if err != nil {
+			panic(err)
+		}
+
+		for row.Next() {
+			err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview)
+			if err != nil {
+				panic(err)
+			}
+			t1.DisPrice = t1.Base.Price
+			t2 = append(t2, t1)
+		}
+	} else if sort == "ex" {
+		row, err := db.Query("CALL sortexprod()")
+		if err != nil {
+			panic(err)
+		}
+
+		for row.Next() {
+			err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview)
+			if err != nil {
+				panic(err)
+			}
+			t1.DisPrice = t1.Base.Price
+			t2 = append(t2, t1)
+		}
+	} else if sort == "rate" {
+		row, err := db.Query("CALL sortpoprod()")
+		if err != nil {
+			panic(err)
+		}
+
+		for row.Next() {
+			err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview)
+			if err != nil {
+				panic(err)
+			}
+			t1.DisPrice = t1.Base.Price
+			t2 = append(t2, t1)
+		}
+	}
+
 	return t2
 }
 
@@ -54,11 +119,11 @@ func Getchprod() []strs.ProdSim {
 	}
 
 	for row.Next() {
-		err := row.Scan(&t1.ID, &t1.Name, &t1.Price, &t1.Category, &t1.Rating, &t1.SReview)
+		err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview)
 		if err != nil {
 			panic(err)
 		}
-		t1.DisPrice = t1.Price
+		t1.DisPrice = t1.Base.Price
 		t2 = append(t2, t1)
 	}
 	return t2
