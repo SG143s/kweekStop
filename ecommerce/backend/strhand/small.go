@@ -12,7 +12,7 @@ type LogInf struct {
 	Password string `json:"lpass"`
 }
 
-type prodSim struct {
+type ProdSim struct {
 	ID       string  `json:"pid"`
 	Name     string  `json:"pname"`
 	Price    int     `json:"orprice"`
@@ -22,7 +22,7 @@ type prodSim struct {
 	SReview  int     `json:"psrev"`
 }
 
-type catLink struct {
+type CatLink struct {
 	ID   int    `json:"cid"`
 	Name string `json:"cname"`
 	Img  string `json:"cimg"`
@@ -42,7 +42,7 @@ type shopSim struct {
 }
 
 type prodCom struct {
-	Base prodSim `json:"pbase"`
+	Base ProdSim `json:"pbase"`
 	Desc string  `json:"pdesc"`
 	Shop shopSim `json:"sbase"`
 }

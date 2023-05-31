@@ -5,21 +5,21 @@ type Profile struct {
 
 type Home struct {
 	Prof     UserTop   `json:"profile"`
-	PopCat   []catLink `json:"popcats"`
-	Popprod  []prodSim `json:"poprod"`
-	Newprod  []prodSim `json:"newprod"`
-	RandCat  []catLink `json:"rcats"`
-	Cheaprod []prodSim `json:"chprod"`
+	PopCat   []CatLink `json:"popcats"`
+	Popprod  []ProdSim `json:"poprod"`
+	Newprod  []ProdSim `json:"newprod"`
+	RandCat  []CatLink `json:"rcats"`
+	Cheaprod []ProdSim `json:"chprod"`
 }
 
 type ProdP struct {
 	Base  prodCom   `json:"pcom"`
-	RelIt []prodSim `json:"rprod"`
+	RelIt []ProdSim `json:"rprod"`
 	Rev   []reviews `json:"prev"`
 }
 
 type Shop struct {
 	Prof  UserTop   `json:"profile"`
 	Sh    shopCom   `json:"shopD"`
-	SProd []prodSim `json:"sProd"`
+	SProd []ProdSim `json:"sProd"`
 }
