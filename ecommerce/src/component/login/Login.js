@@ -1,20 +1,78 @@
 import './Login.css';
+import React from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
+import { useContext } from 'react';
+import { AuthContext } from '../../../contexts/AuthContext';
+
 
 const Login = (props) => {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [autherror, setAutherror] = useState(false);
+
+    const { login } = useContext(AuthContext);
+    const router = useRouter();
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+  
+      // Send form data to API route
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        body: JSON.stringify({ username, password }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      const data = await response.json();
+      console.log(data);
+      // Handle response from the API route accordingly
+      if (response.ok) {
+        // Login successful
+        console.log(data);
+        console.log('Login successful');
+        setAutherror(false);
+        login(data); // Call the login function from AuthContext
+        router.push('/'); // Redirect to the home page
+    } else {
+        // Login failed
+        console.error('Login failed:', data.error);
+        setAutherror(true);
+      }
+    };
+
+
     return (
         <div className="login-page">
             <div className="login-header">
                 <div className='login-header-container'>
                     <p className="header">Log in</p>
                     <div className="input-login">
-                        <form>
-                            <label><p>Username</p>
-                                <input type="text" name="username" placeholder="username" />
+                        <form onSubmit={handleSubmit}>
+                            <label>
+                            <p>Username</p>
+                            <input
+                                type="text"
+                                name="username"
+                                placeholder="username"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                            />
                             </label>
-                            <label><p>Password</p>
-                                <input type="text" name="password" placeholder="at least 6 characters" />
+                            <label>
+                            <p>Password</p>
+                            <input
+                                type="password"
+                                name="password"
+                                placeholder="at least 6 characters"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
                             </label>
-                                <button className="login-button">Continue</button>
+                            {autherror ? <p className='auth-failed'>Your username/password is incorrect.</p> : null}
+                            <button type="submit" className="login-button">Continue</button>
                         </form>
                     </div>
                     <div className="detail">

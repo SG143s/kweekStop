@@ -108,3 +108,16 @@ p.actual-price {
 .product-review {
     margin-right: 20px;
 }
+
+.product-preview {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.product-preview::-webkit-scrollbar {
+    display: none;
+}
+
+.product-review .product-img:hover {
+    transform: scale(1.1);
+}

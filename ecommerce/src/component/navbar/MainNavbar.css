@@ -6,8 +6,13 @@
     justify-content: space-between;
 }
 
-.navbar-header {
-    /* background-color: antiquewhite; */
+header {
+    position: sticky;
+    padding-top: 1px;
+    top: 0px;
+    z-index: 1111;
+    backdrop-filter: blur(5px);
+    background-color: white;
 }
 
 button {
@@ -27,6 +32,100 @@ button {
     margin-left: 10px;
     transform: translateY(4px);
 }
+
+/* .navbar-menu .navbar-categories-menu p span {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-menu .navbar-categories-menu p span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(253, 156, 11);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-menu .navbar-categories-menu p span:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom right;
+} */
+
+.navbar-menu p.product-us,
+.navbar-menu .navbar-categories-menu p span,
+.navbar-menu p.about-us {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-menu p.product-us::after,
+.navbar-menu .navbar-categories-menu p span::after,
+.navbar-menu p.about-us::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(253, 156, 11);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-menu .navbar-categories-menu p span::after {
+    bottom: -6px;
+}
+
+.navbar-menu p.product-us:hover::after,
+.navbar-menu .navbar-categories-menu p span:hover::after,
+.navbar-menu p.about-us:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom right;
+}
+
+.search-bar form button:hover {
+    color: black;
+}
+
+.login-signup button.login:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.login-signup button.signup:hover {
+    background-color: rgb(255, 181, 71);
+}
+
+.category-detail .category-detail-container img:hover {
+    filter: brightness(1.1);
+}
+
+
+/* p.categories-navbar {
+    position: relative;
+    display: inline-block;
+}
+
+p.categories-navbar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    color: rgb(253, 156, 11);
+    transition: width 0.3s;
+}
+
+p.categories-navbar:hover::after {
+    width: 100%;
+} */
 
 
 .search-bar input {
@@ -76,7 +175,8 @@ input, input:focus, input:hover, input:active {
     margin-right: 20px;
     border-color:rgb(253, 156, 11);
     font-weight: 700;
-    box-shadow: none;
+    /* box-shadow: none; */
+    border: 1px solid rgb(253, 156, 11);
 }
 
 button.cart {
@@ -94,11 +194,14 @@ button, button:focus, button:hover, button:active {
 }
 
 .login-signup .signup {
-    color:rgb(245, 245, 245);
     background-color: rgb(253, 156, 11);
 }
 
-.navbar-line hr {
+.login-signup .signup a {
+    color:rgb(245, 245, 245);
+}
+
+.navbar-line hr{
     border: none;
     /* height: 20px; */
     /* width: 90%; */
@@ -107,4 +210,68 @@ button, button:focus, button:hover, button:active {
     border-bottom: 1px solid yellow;
     box-shadow: 1px 12px 20px -20px rgb(122, 122, 122);
     margin: -50px auto 10px; 
+}
+
+.navbar-categories-menu:hover > .dropdown-categories {
+    display: flex;
+    position: absolute;
+}
+
+.navbar-categories-menu {
+    display: grid;
+}
+
+.dropdown-categories {
+    display: none;
+}
+
+.categories-menu-div {
+    padding-left: 40%;
+}
+
+.categories-menu {
+    text-align: left;
+    width: 100%;
+    padding: 0% 5% 1% 5%;
+    position: fixed;
+    background-color: white;
+    /* z-index: 1; */
+    /* transform: translateY(20px); */
+    margin-top: 30px;
+    transform: translateX(-17%);
+}
+
+.categories-menu td {
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    /* margin-right: 10%; */
+    cursor: pointer;
+}
+
+.categories-menu td:hover{
+    background-color: rgb(253, 156, 11);
+    border-radius: 50px;
+    color: white;
+}
+
+.user-profile-navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-profile-navbar img {
+    border-radius: 30px;
+    margin-right: 20px;
+}
+
+.user-profile-navbar p{
+    font-size: 13px;
+    font-weight: bold;
+    transform: translateY(-6px);
+}
+
+a {
+    text-decoration: none;
 }

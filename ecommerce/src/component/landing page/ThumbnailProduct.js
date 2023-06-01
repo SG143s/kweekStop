@@ -14,18 +14,18 @@ const ThumbnailProduct = ({product}) => {
                     </div>
                     <div className="product-detail">
                         <p className='product-name'>{p.productname}</p>
-                        <p className='category'>{p.category}</p>
+                        <p className='category'>{p.name}</p>
                         <div className='feedback'>
-                            <p className='star'><AiFillStar />{p.star}</p>
-                            <p className='review'>| {p.review}+ reviews</p>
+                            <p className='star'><AiFillStar />{p.id % 5}</p>
+                            <p className='review'>| {p.id}+ reviews</p>
                         </div>
                         <div className='product-price'>
-                            <p className='discount-price'>{p.discprice}</p>
-                            <p className='actual-price'>{p.actprice}</p>
+                            <p className='discount-price'>Rp{p.price}</p>
+                            <p className='actual-price'>Rp{p.price * 1.3}</p>
                         </div>
                     </div>
                 </div>
-            ))};
+            ))}
         </div>
     )
 };

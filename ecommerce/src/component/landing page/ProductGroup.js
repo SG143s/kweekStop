@@ -27,7 +27,6 @@ const ProductGroup = ({titleGroup}) => {
                         <ThumbnailProduct product={product}></ThumbnailProduct>
                     </div>
                 </div>
-                    
             </div>
         </div>
     )

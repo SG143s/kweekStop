@@ -46,3 +46,7 @@
     /* position: absolute; */
     font-weight: bold;
 }
+
+.categories-container .title p span {
+    cursor: pointer;
+}

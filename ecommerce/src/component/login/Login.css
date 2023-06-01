@@ -80,3 +80,7 @@ a {
 .login-footer hr {
     box-shadow: 1px 1px 3px 0px rgb(160, 160, 160);
 }
+
+.auth-failed {
+    color: red;
+}
