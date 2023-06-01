@@ -3,6 +3,10 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/login": "pages/login.js",
+<<<<<<< HEAD
   "/": "pages/index.js",
   "/api/auth/login": "pages/api/auth/login.js"
+=======
+  "/register": "pages/register.js"
+>>>>>>> be16004bfb407644b68836db595b739266623d37
 }
