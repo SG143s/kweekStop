@@ -34,7 +34,7 @@ func Getpoprod() []strs.ProdSim {
 	}
 
 	for row.Next() {
-		err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview)
+		err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview, &t1.Imgpath)
 		if err != nil {
 			panic(err)
 		}
@@ -55,7 +55,7 @@ func Getallprod(sort string) []strs.ProdSim {
 		}
 
 		for row.Next() {
-			err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview)
+			err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview, &t1.Imgpath)
 			if err != nil {
 				panic(err)
 			}
@@ -69,7 +69,7 @@ func Getallprod(sort string) []strs.ProdSim {
 		}
 
 		for row.Next() {
-			err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview)
+			err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview, &t1.Imgpath)
 			if err != nil {
 				panic(err)
 			}
@@ -83,7 +83,7 @@ func Getallprod(sort string) []strs.ProdSim {
 		}
 
 		for row.Next() {
-			err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview)
+			err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview, &t1.Imgpath)
 			if err != nil {
 				panic(err)
 			}
@@ -97,7 +97,7 @@ func Getallprod(sort string) []strs.ProdSim {
 		}
 
 		for row.Next() {
-			err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview)
+			err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview, &t1.Imgpath)
 			if err != nil {
 				panic(err)
 			}
@@ -119,7 +119,7 @@ func Getchprod() []strs.ProdSim {
 	}
 
 	for row.Next() {
-		err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview)
+		err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview, &t1.Imgpath)
 		if err != nil {
 			panic(err)
 		}
