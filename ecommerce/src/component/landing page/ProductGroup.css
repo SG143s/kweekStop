@@ -1,0 +1,123 @@
+.productgroup-container {
+    background-color: white;
+    border-radius: 15px;
+    width: 70%;
+    /* height: ; */
+    position: center;
+    margin: auto;
+    margin-top: 30px;
+    /* margin-bottom: 70px; */
+}
+
+.productgroup-container .title p.group-name {
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(51, 48, 48);
+    text-align: left;
+    padding: 10px 5px 15px 15px;
+}
+
+.product-preview {
+    text-align: left;
+    margin-left: 35px;
+    transform: translateY(-12px);
+}
+
+.product-preview .product-img {
+    text-align: left;
+    width: 150px;
+    height: 200px;
+    box-shadow: 1px 1px 3px 1px rgb(214, 214, 214);
+    border-radius: 10px;
+}
+
+.product-detail {
+    width: 150px;
+}
+
+.product-preview .product-img img {
+    margin-top: 50px;
+    margin-left: 16px;
+}
+
+.product-detail p {
+    font-weight: lighter;
+}
+
+p.product-name {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+p.category {
+    color: rgb(0, 102, 204);
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: -10px;
+}
+
+.product-detail .feedback {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.product-detail .feedback p {
+    font-size: 12px;
+    margin-top: -5px;
+}
+
+p.review {
+    margin-left: 5px;
+    color: rgb(109, 117, 136);
+}
+
+.product-price {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -19px;
+}
+
+p.discount-price {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.star {
+    color: rgb(255, 196, 0);
+}
+
+.star svg {
+    margin-right: 5px;
+    margin-top: 1px;
+}
+
+p.actual-price {
+    font-size: 11px;
+    margin-left: 4px;
+    margin-top: 17px;
+    color: rgb(109, 117, 136);
+    text-decoration: line-through;
+}
+
+.product-preview {
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.product-review {
+    margin-right: 20px;
+}
+
+.product-preview {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.product-preview::-webkit-scrollbar {
+    display: none;
+}
+
+.product-review .product-img:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,44 @@
+.banner-container {
+    background-color: rgb(253, 156, 11);
+    border-radius: 20px;
+    width: 70%;
+    position: center;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.free-notes-browse {
+    margin: 30px 0px 30px 30px;
+    color: white;
+    text-align: left;
+    font-size: 12px;
+}
+
+.free-notes-browse button {
+    border-radius: 30px;
+    color: black;
+    background-color: white;
+    border: none;
+    padding: 5px 20px 5px 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.banner-container .checkout {
+    margin: 30px 30px 30px 0px;
+    text-align: right;
+}
+
+.cart-circle {
+    transform: translateY(3px)
+}
+
+.banner-container .thin-checkout {
+    margin-right: 30px;
+}
+
+.banner-container .bold-checkout {
+    margin-right: 20px;
+}

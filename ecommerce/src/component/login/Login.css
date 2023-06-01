@@ -1,0 +1,86 @@
+.login-header {
+    width: 25%;
+    position: center;
+    margin: auto;
+    box-shadow: 1px 1px 3px 1px rgb(214, 214, 214);
+    border-radius: 10px;
+    height: 500px;
+    margin-top: 70px;
+    margin-bottom: 60px;
+}
+
+.login-header-container {
+    padding: 50px 70px 50px 70px;
+    text-align: left;
+}
+
+.login-header p.header {
+    font-size: 20px;
+    font-weight: bolder;
+    /* text-align: left; */
+}
+
+.login-header-container .input-login p {
+    /* text-align: left; */
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+.login-header-container .input-login input {
+    border-radius: 5px;
+    width: 230px;
+    /* border-color: gray; */
+    padding: 3px;
+    padding-left: 10px;
+    margin-top: 4px;
+}
+
+.login-header-container .input-login button {
+    margin-top: 70px;
+    width: 250px;
+    background-color: rgb(253, 156, 11);
+    border-radius: 3px;
+    border: none;
+    padding-top: 7px;
+    padding-bottom: 6px;
+}
+
+input {
+    border: 1px rgb(160, 160, 160) solid;
+}
+
+a {
+    color: rgb(0, 102, 192);
+}
+
+.login-header .detail,
+.login-header .have-account {
+    font-size: 12px;
+}
+
+.login-header .detail {
+    margin-top: 60px;
+}
+
+.login-footer .help {
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+    position: center;
+    margin: auto;
+    font-size: 10px;
+    color: rgb(0, 102, 192);
+}
+
+.login-footer .cr {
+    font-size: 10px;
+}
+
+.login-footer hr {
+    box-shadow: 1px 1px 3px 0px rgb(160, 160, 160);
+}
+
+.auth-failed {
+    color: red;
+}
