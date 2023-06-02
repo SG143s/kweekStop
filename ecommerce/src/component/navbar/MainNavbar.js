@@ -7,10 +7,15 @@ import CategoriesMenu from "./CategoriesMenu";
 import { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthContext';
 // import MainLogo from '../png components/Main Logo.png';
+import { useRouter } from 'next/router';
 
-const MainNavbar = (props) => {
-
+const MainNavbar = ({items}) => {
+  const router = useRouter();
   const { loggedIn, userData } = useContext(AuthContext);
+
+  const handleClick = (userId) => {
+      router.push(`/cart?id=${userId}`);
+  };
 
   console.log(loggedIn); // true or false
   console.log(userData); // user data object
@@ -38,7 +43,7 @@ const MainNavbar = (props) => {
           </form>
         </div>
         <div className="navbar-right-side">
-          <button className="cart"><AiOutlineShoppingCart/></button>
+          <button className="cart" onClick={() => handleClick(userData.id)}><AiOutlineShoppingCart/>{items ? <p className="item-num-cart">{items.length}</p> : <p className="item-num-cart">0</p> }</button>
         </div>
         {!loggedIn ? (
             <div className="login-signup">

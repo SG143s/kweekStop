@@ -17,6 +17,7 @@ export default async function handler(req, res) {
       JOIN categoryprod ON product.id = categoryprod.productid
       JOIN category ON category.id = categoryprod.categoryid;
     `;
+    // const data = await prisma.product.findMany();
 
     return res.status(200).json(data);
   } catch (error) {

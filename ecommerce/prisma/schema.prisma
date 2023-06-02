@@ -187,6 +187,10 @@ model users {
   userreview userreview[]
 }
 
+model getallprodandcat {
+  
+}
+
 enum paymentdetails_status {
   paid
   unpaid

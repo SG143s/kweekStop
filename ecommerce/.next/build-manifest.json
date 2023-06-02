@@ -28,18 +28,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/login": [
+    "/cart": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/login.js"
-<<<<<<< HEAD
-=======
-    ],
-    "/register": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/register.js"
->>>>>>> be16004bfb407644b68836db595b739266623d37
+      "static/chunks/pages/cart.js"
     ]
   },
   "ampFirstPages": []
