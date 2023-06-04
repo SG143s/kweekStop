@@ -7,6 +7,15 @@ type UserTop struct {
 	ProfilePic string `json:"prpic"`
 }
 
+type UserInfo struct {
+	ID         string `json:"uid"`
+	Name       string `json:"name"`
+	UserName   string `json:"usname"`
+	Email      string `json:"email"`
+	Password   string `json:"passw"`
+	ProfilePic string `json:"prpic"`
+}
+
 type LogInf struct {
 	Username string `json:"luname"`
 	Password string `json:"lpass"`
@@ -56,4 +65,22 @@ type ProdCom struct {
 type shopCom struct {
 	Base    shopSim `json:"sbase"`
 	Address string  `json:"saddr"`
+}
+
+type ProdCart struct {
+	ID       string  `json:"pid"`
+	Name     string  `json:"pname"`
+	Quantity int     `json:"quan"`
+	SPrice   float32 `json:"sprice"`
+	ToPrice  float32 `json:"tprice"`
+}
+
+type ShopCart struct {
+	Base  shopSim    `json:"shopd"`
+	Items []ProdCart `json:"itemd"`
+}
+
+type ProdCAdd struct {
+	ID       string `json:"pid"`
+	Quantity int    `json:"quan"`
 }

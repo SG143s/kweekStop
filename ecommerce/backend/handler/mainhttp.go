@@ -14,17 +14,7 @@ func Start() {
 	store := cookie.NewStore([]byte("secret"))
 	r.Use(sessions.Sessions("mysession", store))
 
-	r.GET("/", func(c *gin.Context) {
-		session := sessions.Default(c)
-
-		logIn := session.Get("loggedIn")
-		if logIn == nil {
-			session.Set("loggedIn", false)
-		}
-		session.Save()
-		c.Redirect(302, "/home")
-	})
-	r.GET("/home", pg.PaHome)
+	r.GET("/", pg.PaHome)
 	r.GET("/products", pg.PaProd)
 	r.GET("/products#sort=expensive", pg.ExProd)
 	r.GET("/products#sort=cheap", pg.ChProd)

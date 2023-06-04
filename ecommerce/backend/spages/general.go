@@ -4,15 +4,27 @@ import (
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 
+	au "github.com/SG143s/kweekStop/ecommerce/auth"
 	op "github.com/SG143s/kweekStop/ecommerce/op"
 	sqop "github.com/SG143s/kweekStop/ecommerce/sqlmain"
 	strs "github.com/SG143s/kweekStop/ecommerce/strhand"
 )
 
+func SessTry(session sessions.Session) sessions.Session {
+
+	logIn := session.Get("loggedIn")
+	if logIn == nil {
+		session.Set("loggedIn", false)
+	}
+	session.Save()
+	return session
+}
+
 func PaHome(c *gin.Context) {
 	session := sessions.Default(c)
+	session = SessTry(session)
 	var pjson strs.Home
-	logIn := session.Get("loggedIn")
+	logIn := au.ChAuth(session)
 	if logIn == false {
 		pjson.Prof.Log = false
 	} else {
@@ -24,6 +36,7 @@ func PaHome(c *gin.Context) {
 
 func PaProd(c *gin.Context) {
 	session := sessions.Default(c)
+	session = SessTry(session)
 	var pjson strs.Prods
 	logIn := session.Get("loggedIn")
 	if logIn == false {
@@ -37,6 +50,7 @@ func PaProd(c *gin.Context) {
 
 func ChProd(c *gin.Context) {
 	session := sessions.Default(c)
+	session = SessTry(session)
 	var pjson strs.Prods
 	logIn := session.Get("loggedIn")
 	if logIn == false {
@@ -50,6 +64,7 @@ func ChProd(c *gin.Context) {
 
 func ExProd(c *gin.Context) {
 	session := sessions.Default(c)
+	session = SessTry(session)
 	var pjson strs.Prods
 	logIn := session.Get("loggedIn")
 	if logIn == false {
@@ -63,6 +78,7 @@ func ExProd(c *gin.Context) {
 
 func PoProd(c *gin.Context) {
 	session := sessions.Default(c)
+	session = SessTry(session)
 	var pjson strs.Prods
 	logIn := session.Get("loggedIn")
 	if logIn == false {
