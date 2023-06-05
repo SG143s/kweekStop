@@ -18,7 +18,7 @@ func checkUsName(uname string) bool {
 
 func GetIdUname(uname string) string {
 	var id string
-	row, err := db.Query("SELECT iduser FROM users where username = ?", uname)
+	row, err := db.Query("SELECT id FROM users where username = ?", uname)
 	if err != nil {
 		panic(err)
 	}
@@ -34,7 +34,7 @@ func GetIdUname(uname string) string {
 
 func getPass(id string) string {
 	var pass string
-	row, err := db.Query("SELECT password FROM users where iduser = ?", id)
+	row, err := db.Query("SELECT password FROM users where id = ?", id)
 	if err != nil {
 		panic(err)
 	}

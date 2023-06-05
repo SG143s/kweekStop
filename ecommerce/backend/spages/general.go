@@ -25,7 +25,7 @@ func PaHome(c *gin.Context) {
 	session = SessTry(session)
 	var pjson strs.Home
 	logIn := au.ChAuth(session)
-	if logIn == false {
+	if !logIn {
 		pjson.Prof.Log = false
 	} else {
 		pjson.Prof = sqop.GetUserIn(session.Get("userId").(string))
@@ -38,8 +38,8 @@ func PaProd(c *gin.Context) {
 	session := sessions.Default(c)
 	session = SessTry(session)
 	var pjson strs.Prods
-	logIn := session.Get("loggedIn")
-	if logIn == false {
+	logIn := au.ChAuth(session)
+	if !logIn {
 		pjson.Prof.Log = false
 	} else {
 		pjson.Prof = sqop.GetUserIn(session.Get("userId").(string))
