@@ -70,3 +70,11 @@ join productimg on productimg.productid = product.id
 join categoryprod on categoryprod.productid = product.id
 join category on category.id = categoryprod.categoryid
 order by price desc
+
+addcart:
+    parameter:pid, uid, quant
+    IF (SELECT EXISTS(SELECT 1 FROM cart WHERE username = uid AND productid = pid LIMIT 1)) THEN
+        UPDATE cart SET quantity = (quant + quantity) WHERE username = uid AND productid = pid
+    ELSE
+        INSERT INTO cart VALUES (uid, pid, quant)
+    END IF;

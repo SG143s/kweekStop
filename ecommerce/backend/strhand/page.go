@@ -29,3 +29,7 @@ type Shop struct {
 	Sh    shopCom   `json:"shopD"`
 	SProd []ProdSim `json:"sProd"`
 }
+
+type Cart struct {
+	Data []ShopCart `json:"data"`
+}
