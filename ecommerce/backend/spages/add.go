@@ -25,7 +25,7 @@ func RegUs(c *gin.Context) {
 	}
 }
 
-func AddCart(c *gin.Context) {
+func CartAdd(c *gin.Context) {
 	session := sessions.Default(c)
 	logIn := au.ChAuth(session)
 	if !logIn {

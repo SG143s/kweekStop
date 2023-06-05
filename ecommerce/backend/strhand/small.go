@@ -84,3 +84,8 @@ type ProdCAdd struct {
 	ID       string `json:"pid"`
 	Quantity int    `json:"quan"`
 }
+
+type CartOp struct {
+	Base ProdCAdd `json:"base"`
+	Op   string   `json:"operation"`
+}
