@@ -18,10 +18,6 @@ func SqlStart() {
 	dbt.Close()
 }
 
-func GetDB() sql.DB {
-	return db
-}
-
 func SqlStop() {
 	db.Close()
 }

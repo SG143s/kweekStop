@@ -43,3 +43,60 @@ func CartAdd(c *gin.Context) {
 		}
 	}
 }
+
+func ButtonCart1(c *gin.Context) {
+	session := sessions.Default(c)
+	logIn := au.ChAuth(session)
+	if !logIn {
+		c.JSON(401, gin.H{"error": "User Not Logged In"})
+	} else {
+		uid := session.Get("userId").(string)
+		var info strs.ProdCAdd
+		if err := c.ShouldBindJSON(&info); err != nil {
+			c.JSON(400, gin.H{"error": "Invalid request"})
+			return
+		}
+		ent := sqop.CartOp1(info, uid)
+		if !ent {
+			c.JSON(400, gin.H{"error": "Invalid request"})
+		}
+	}
+}
+
+func ButtonCart2(c *gin.Context) {
+	session := sessions.Default(c)
+	logIn := au.ChAuth(session)
+	if !logIn {
+		c.JSON(401, gin.H{"error": "User Not Logged In"})
+	} else {
+		uid := session.Get("userId").(string)
+		var info strs.ProdCAdd
+		if err := c.ShouldBindJSON(&info); err != nil {
+			c.JSON(400, gin.H{"error": "Invalid request"})
+			return
+		}
+		ent := sqop.CartOp2(info, uid)
+		if !ent {
+			c.JSON(400, gin.H{"error": "Invalid request"})
+		}
+	}
+}
+
+func ButtonCart3(c *gin.Context) {
+	session := sessions.Default(c)
+	logIn := au.ChAuth(session)
+	if !logIn {
+		c.JSON(401, gin.H{"error": "User Not Logged In"})
+	} else {
+		uid := session.Get("userId").(string)
+		var info strs.ProdCAdd
+		if err := c.ShouldBindJSON(&info); err != nil {
+			c.JSON(400, gin.H{"error": "Invalid request"})
+			return
+		}
+		ent := sqop.CartOp3(info, uid)
+		if !ent {
+			c.JSON(400, gin.H{"error": "Invalid request"})
+		}
+	}
+}

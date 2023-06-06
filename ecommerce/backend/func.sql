@@ -78,3 +78,15 @@ addcart:
     ELSE
         INSERT INTO cart VALUES (uid, pid, quant);
     END IF;
+
+cartop1:
+    parameter:pid, uid
+    UPDATE cart SET quantity = (1 + quantity) WHERE userid = uid AND productid = pid;
+
+cartop2
+    parameter:pid, uid
+    UPDATE cart SET quantity = (quantity - 1) WHERE userid = uid AND productid = pid;
+
+cartop3
+    parameter:pid, uid
+    DELETE FROM cart WHERE userid = uid AND productid = pid;
