@@ -3,7 +3,7 @@ self.__RSC_MANIFEST={
   "edgeSSRModuleMapping": {},
   "cssFiles": {},
   "clientModules": {
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\client\\components\\app-router.js": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\client\\components\\app-router.js": {
       "id": "(app-client)/../node_modules/next/dist/client/components/app-router.js",
       "name": "*",
       "chunks": [
@@ -11,7 +11,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js": {
       "id": "(app-client)/../node_modules/next/dist/client/components/app-router.js",
       "name": "*",
       "chunks": [
@@ -19,7 +19,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\client\\components\\app-router.js#": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\client\\components\\app-router.js#": {
       "id": "(app-client)/../node_modules/next/dist/client/components/app-router.js",
       "name": "",
       "chunks": [
@@ -27,7 +27,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#": {
       "id": "(app-client)/../node_modules/next/dist/client/components/app-router.js",
       "name": "",
       "chunks": [
@@ -35,7 +35,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\client\\components\\app-router.js#default": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\client\\components\\app-router.js#default": {
       "id": "(app-client)/../node_modules/next/dist/client/components/app-router.js",
       "name": "default",
       "chunks": [
@@ -43,7 +43,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#default": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#default": {
       "id": "(app-client)/../node_modules/next/dist/client/components/app-router.js",
       "name": "default",
       "chunks": [
@@ -51,7 +51,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\client\\components\\app-router.js#getServerActionDispatcher": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\client\\components\\app-router.js#getServerActionDispatcher": {
       "id": "(app-client)/../node_modules/next/dist/client/components/app-router.js",
       "name": "getServerActionDispatcher",
       "chunks": [
@@ -59,7 +59,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#getServerActionDispatcher": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#getServerActionDispatcher": {
       "id": "(app-client)/../node_modules/next/dist/client/components/app-router.js",
       "name": "getServerActionDispatcher",
       "chunks": [
@@ -67,7 +67,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\client\\components\\app-router.js#urlToUrlWithoutFlightMarker": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\client\\components\\app-router.js#urlToUrlWithoutFlightMarker": {
       "id": "(app-client)/../node_modules/next/dist/client/components/app-router.js",
       "name": "urlToUrlWithoutFlightMarker",
       "chunks": [
@@ -75,7 +75,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#urlToUrlWithoutFlightMarker": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js#urlToUrlWithoutFlightMarker": {
       "id": "(app-client)/../node_modules/next/dist/client/components/app-router.js",
       "name": "urlToUrlWithoutFlightMarker",
       "chunks": [
@@ -83,7 +83,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
       "id": "(app-client)/../node_modules/next/dist/client/components/error-boundary.js",
       "name": "*",
       "chunks": [
@@ -91,7 +91,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js": {
       "id": "(app-client)/../node_modules/next/dist/client/components/error-boundary.js",
       "name": "*",
       "chunks": [
@@ -99,7 +99,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\client\\components\\error-boundary.js#": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\client\\components\\error-boundary.js#": {
       "id": "(app-client)/../node_modules/next/dist/client/components/error-boundary.js",
       "name": "",
       "chunks": [
@@ -107,7 +107,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#": {
       "id": "(app-client)/../node_modules/next/dist/client/components/error-boundary.js",
       "name": "",
       "chunks": [
@@ -115,7 +115,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\client\\components\\error-boundary.js#default": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\client\\components\\error-boundary.js#default": {
       "id": "(app-client)/../node_modules/next/dist/client/components/error-boundary.js",
       "name": "default",
       "chunks": [
@@ -123,7 +123,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#default": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#default": {
       "id": "(app-client)/../node_modules/next/dist/client/components/error-boundary.js",
       "name": "default",
       "chunks": [
@@ -131,7 +131,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\client\\components\\error-boundary.js#ErrorBoundaryHandler": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\client\\components\\error-boundary.js#ErrorBoundaryHandler": {
       "id": "(app-client)/../node_modules/next/dist/client/components/error-boundary.js",
       "name": "ErrorBoundaryHandler",
       "chunks": [
@@ -139,7 +139,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#ErrorBoundaryHandler": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#ErrorBoundaryHandler": {
       "id": "(app-client)/../node_modules/next/dist/client/components/error-boundary.js",
       "name": "ErrorBoundaryHandler",
       "chunks": [
@@ -147,7 +147,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\client\\components\\error-boundary.js#ErrorBoundary": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\client\\components\\error-boundary.js#ErrorBoundary": {
       "id": "(app-client)/../node_modules/next/dist/client/components/error-boundary.js",
       "name": "ErrorBoundary",
       "chunks": [
@@ -155,7 +155,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#ErrorBoundary": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js#ErrorBoundary": {
       "id": "(app-client)/../node_modules/next/dist/client/components/error-boundary.js",
       "name": "ErrorBoundary",
       "chunks": [
@@ -163,7 +163,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js": {
       "id": "(app-client)/../node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "*",
       "chunks": [
@@ -171,7 +171,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js": {
       "id": "(app-client)/../node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "*",
       "chunks": [
@@ -179,7 +179,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#": {
       "id": "(app-client)/../node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "",
       "chunks": [
@@ -187,7 +187,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#": {
       "id": "(app-client)/../node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "",
       "chunks": [
@@ -195,7 +195,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#default": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#default": {
       "id": "(app-client)/../node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "default",
       "chunks": [
@@ -203,7 +203,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#default": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#default": {
       "id": "(app-client)/../node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "default",
       "chunks": [
@@ -211,7 +211,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#RedirectErrorBoundary": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#RedirectErrorBoundary": {
       "id": "(app-client)/../node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "RedirectErrorBoundary",
       "chunks": [
@@ -219,7 +219,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#RedirectErrorBoundary": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#RedirectErrorBoundary": {
       "id": "(app-client)/../node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "RedirectErrorBoundary",
       "chunks": [
@@ -227,7 +227,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#RedirectBoundary": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\client\\components\\redirect-boundary.js#RedirectBoundary": {
       "id": "(app-client)/../node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "RedirectBoundary",
       "chunks": [
@@ -235,7 +235,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#RedirectBoundary": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\client\\components\\redirect-boundary.js#RedirectBoundary": {
       "id": "(app-client)/../node_modules/next/dist/client/components/redirect-boundary.js",
       "name": "RedirectBoundary",
       "chunks": [
@@ -243,7 +243,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js": {
       "id": "(app-client)/../node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
       "name": "*",
       "chunks": [
@@ -251,7 +251,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js": {
       "id": "(app-client)/../node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
       "name": "*",
       "chunks": [
@@ -259,7 +259,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js#": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js#": {
       "id": "(app-client)/../node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
       "name": "",
       "chunks": [
@@ -267,7 +267,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js#": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js#": {
       "id": "(app-client)/../node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
       "name": "",
       "chunks": [
@@ -275,15 +275,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js#default": {
-      "id": "(app-client)/../node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
-      "name": "default",
-      "chunks": [
-        "webpack:static/chunks/webpack.js"
-      ],
-      "async": false
-    },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js#default": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\client\\components\\router-reducer\\fetch-server-response.js#default": {
       "id": "(app-client)/../node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
       "name": "default",
       "chunks": [
@@ -291,7 +283,15 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\client\\components\\router-reducer\\fetch-server-response.js#default": {
+      "id": "(app-client)/../node_modules/next/dist/client/components/router-reducer/fetch-server-response.js",
+      "name": "default",
+      "chunks": [
+        "webpack:static/chunks/webpack.js"
+      ],
+      "async": false
+    },
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "*",
       "chunks": [
@@ -299,7 +299,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "*",
       "chunks": [
@@ -307,7 +307,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "",
       "chunks": [
@@ -315,7 +315,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "",
       "chunks": [
@@ -323,7 +323,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#CacheStates": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#CacheStates": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "CacheStates",
       "chunks": [
@@ -331,7 +331,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#CacheStates": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#CacheStates": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "CacheStates",
       "chunks": [
@@ -339,7 +339,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#AppRouterContext": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#AppRouterContext": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "AppRouterContext",
       "chunks": [
@@ -347,7 +347,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#AppRouterContext": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#AppRouterContext": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "AppRouterContext",
       "chunks": [
@@ -355,7 +355,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#LayoutRouterContext": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#LayoutRouterContext": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "LayoutRouterContext",
       "chunks": [
@@ -363,7 +363,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#LayoutRouterContext": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#LayoutRouterContext": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "LayoutRouterContext",
       "chunks": [
@@ -371,7 +371,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#GlobalLayoutRouterContext": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#GlobalLayoutRouterContext": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "GlobalLayoutRouterContext",
       "chunks": [
@@ -379,7 +379,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#GlobalLayoutRouterContext": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#GlobalLayoutRouterContext": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "GlobalLayoutRouterContext",
       "chunks": [
@@ -387,7 +387,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#TemplateContext": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\shared\\lib\\app-router-context.js#TemplateContext": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "TemplateContext",
       "chunks": [
@@ -395,7 +395,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#TemplateContext": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\shared\\lib\\app-router-context.js#TemplateContext": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/app-router-context.js",
       "name": "TemplateContext",
       "chunks": [
@@ -403,7 +403,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/hooks-client-context.js",
       "name": "*",
       "chunks": [
@@ -411,7 +411,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/hooks-client-context.js",
       "name": "*",
       "chunks": [
@@ -419,7 +419,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js#": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js#": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/hooks-client-context.js",
       "name": "",
       "chunks": [
@@ -427,7 +427,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js#": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js#": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/hooks-client-context.js",
       "name": "",
       "chunks": [
@@ -435,7 +435,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js#SearchParamsContext": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js#SearchParamsContext": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/hooks-client-context.js",
       "name": "SearchParamsContext",
       "chunks": [
@@ -443,7 +443,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js#SearchParamsContext": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js#SearchParamsContext": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/hooks-client-context.js",
       "name": "SearchParamsContext",
       "chunks": [
@@ -451,7 +451,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js#PathnameContext": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\shared\\lib\\hooks-client-context.js#PathnameContext": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/hooks-client-context.js",
       "name": "PathnameContext",
       "chunks": [
@@ -459,7 +459,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js#PathnameContext": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\shared\\lib\\hooks-client-context.js#PathnameContext": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/hooks-client-context.js",
       "name": "PathnameContext",
       "chunks": [
@@ -467,7 +467,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/server-inserted-html.js",
       "name": "*",
       "chunks": [
@@ -475,7 +475,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/server-inserted-html.js",
       "name": "*",
       "chunks": [
@@ -483,7 +483,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js#": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js#": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/server-inserted-html.js",
       "name": "",
       "chunks": [
@@ -491,7 +491,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js#": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js#": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/server-inserted-html.js",
       "name": "",
       "chunks": [
@@ -499,7 +499,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js#ServerInsertedHTMLContext": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js#ServerInsertedHTMLContext": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/server-inserted-html.js",
       "name": "ServerInsertedHTMLContext",
       "chunks": [
@@ -507,7 +507,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js#ServerInsertedHTMLContext": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js#ServerInsertedHTMLContext": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/server-inserted-html.js",
       "name": "ServerInsertedHTMLContext",
       "chunks": [
@@ -515,7 +515,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js#useServerInsertedHTML": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\shared\\lib\\server-inserted-html.js#useServerInsertedHTML": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/server-inserted-html.js",
       "name": "useServerInsertedHTML",
       "chunks": [
@@ -523,7 +523,7 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js#useServerInsertedHTML": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\node_modules\\next\\dist\\esm\\shared\\lib\\server-inserted-html.js#useServerInsertedHTML": {
       "id": "(app-client)/../node_modules/next/dist/shared/lib/server-inserted-html.js",
       "name": "useServerInsertedHTML",
       "chunks": [
@@ -531,33 +531,43 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\ecommerce\\src\\app\\globals.css#": {
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\ecommerce\\src\\app\\globals.css#": {
       "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/app/globals.css",
       "name": "default",
       "chunks": []
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\ecommerce\\pages\\admin\\components\\styles\\DiskonProduk.css#": {
-      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./pages/admin/components/styles/DiskonProduk.css",
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\ecommerce\\src\\component\\footer\\Footer.css#": {
+      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/footer/Footer.css",
       "name": "default",
       "chunks": []
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\ecommerce\\pages\\admin\\components\\styles\\Kategori.css#": {
-      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./pages/admin/components/styles/Kategori.css",
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\ecommerce\\src\\component\\landing page\\Banner.css#": {
+      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/landing page/Banner.css",
       "name": "default",
       "chunks": []
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\ecommerce\\pages\\admin\\components\\styles\\Navbar.css#": {
-      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./pages/admin/components/styles/Navbar.css",
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\ecommerce\\src\\component\\landing page\\Categories.css#": {
+      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/landing page/Categories.css",
       "name": "default",
       "chunks": []
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\ecommerce\\pages\\admin\\components\\styles\\NavbarLeft.css#": {
-      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./pages/admin/components/styles/NavbarLeft.css",
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\ecommerce\\src\\component\\landing page\\LandingPage.css#": {
+      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/landing page/LandingPage.css",
       "name": "default",
       "chunks": []
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop\\ecommerce\\pages\\admin\\components\\styles\\Products.css#": {
-      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./pages/admin/components/styles/Products.css",
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\ecommerce\\src\\component\\landing page\\ProductGroup.css#": {
+      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/landing page/ProductGroup.css",
+      "name": "default",
+      "chunks": []
+    },
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\ecommerce\\src\\component\\landing page\\SimpleCategory.css#": {
+      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/landing page/SimpleCategory.css",
+      "name": "default",
+      "chunks": []
+    },
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\ecommerce\\src\\component\\navbar\\MainNavbar.css#": {
+      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/navbar/MainNavbar.css",
       "name": "default",
       "chunks": []
     }
