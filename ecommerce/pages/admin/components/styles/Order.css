@@ -1,0 +1,32 @@
+/* headerorder.js */
+
+.btn-navigation.order-page button{
+    padding: 12px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #06152B;
+    border: 1px solid #06152B;
+    margin:5px;
+    border-radius: 20px;
+}
+
+.header-order {
+    margin-left:3vh;
+}
+
+.tabel.recent-order{
+    padding: 2vh 5vh 5vh 5vh;
+}
+
+.tabel.pengiriman-saya{
+    padding: 3vh;
+}
+
+.tabel.pengiriman-saya button{
+    border: none;
+    background-color: #FD9C0B;
+    color: #fff;
+    font-size: 12px;
+    padding:5px;
+    border-radius: 10px;
+}
