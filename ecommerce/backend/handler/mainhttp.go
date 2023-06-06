@@ -20,6 +20,7 @@ func Start() {
 	r.GET("/products/sort/cheap", pg.ChProd)
 	r.GET("/products/sort/popular", pg.PoProd)
 	r.GET("/logout", au.LogOut)
+	r.GET("/profile", pg.Profile)
 
 	r.POST("/login", au.LogIn)
 	r.POST("/cart/add", pg.CartAdd)

@@ -100,8 +100,11 @@ type ProdOr struct {
 }
 
 type OrderSim struct {
-	ID     string   `json:"orid"`
-	Status string   `json:"orstat"`
-	Total  float32  `json:"ortot"`
-	Prods  []ProdOr `json:"orprod"`
+	ID        string   `json:"orid"`
+	PaydetID  string   `json:"payid"`
+	Status    string   `json:"orstat"`
+	Paystatus string   `json:"paystat"`
+	Total     float32  `json:"ortot"`
+	Date      string   `json:"date"`
+	Prods     []ProdOr `json:"orprod"`
 }
