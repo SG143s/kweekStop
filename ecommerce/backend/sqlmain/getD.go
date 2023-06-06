@@ -175,6 +175,9 @@ func GetProfile(base strs.Profile) strs.Profile {
 			panic(err)
 		}
 		row1, err := db.Query("CALL getusorderdet(?)", orders.ID)
+		if err != nil {
+			panic(err)
+		}
 		var prods strs.ProdOr
 		for row1.Next() {
 			err := row1.Scan(&prods.ID, &prods.Name, &prods.Quantity, &prods.SPrice, &prods.TPrice, &prods.Imgpath)
