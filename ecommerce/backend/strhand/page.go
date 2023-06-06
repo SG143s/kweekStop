@@ -1,6 +1,9 @@
 package strhand
 
 type Profile struct {
+	Base   UserInfo   `json:"prbase"`
+	Shops  []ShopSim  `json:"owshop"`
+	Orders []OrderSim `json:"usor"`
 }
 
 type Home struct {
@@ -32,4 +35,7 @@ type Shop struct {
 
 type Cart struct {
 	Data []ShopCart `json:"data"`
+}
+
+type OrderCom struct {
 }

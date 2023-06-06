@@ -48,7 +48,7 @@ type reviews struct {
 	Review   string  `json:"urev"`
 }
 
-type shopSim struct {
+type ShopSim struct {
 	ID   string  `json:"sid"`
 	Name string  `json:"sname"`
 	Img  string  `json:"simg"`
@@ -59,11 +59,11 @@ type ProdCom struct {
 	Base     ProdBase `json:"pbase"`
 	Imgpaths []string `json:"imgpaths"`
 	Desc     string   `json:"pdesc"`
-	Shop     shopSim  `json:"sbase"`
+	Shop     ShopSim  `json:"sbase"`
 }
 
 type shopCom struct {
-	Base    shopSim `json:"sbase"`
+	Base    ShopSim `json:"sbase"`
 	Address string  `json:"saddr"`
 }
 
@@ -76,7 +76,7 @@ type ProdCart struct {
 }
 
 type ShopCart struct {
-	Base  shopSim    `json:"shopd"`
+	Base  ShopSim    `json:"shopd"`
 	Items []ProdCart `json:"itemd"`
 }
 
@@ -88,4 +88,23 @@ type ProdCAdd struct {
 type CartOp struct {
 	Base ProdCAdd `json:"base"`
 	Op   string   `json:"operation"`
+}
+
+type ProdOr struct {
+	ID       string  `json:"pid"`
+	Name     string  `json:"pname"`
+	Quantity int     `json:"pquan"`
+	SPrice   float32 `json:"singleprice"`
+	TPrice   float32 `json:"tprice"`
+	Imgpath  string  `json:"pimg"`
+}
+
+type OrderSim struct {
+	ID        string   `json:"orid"`
+	PaydetID  string   `json:"payid"`
+	Status    string   `json:"orstat"`
+	Paystatus string   `json:"paystat"`
+	Total     float32  `json:"ortot"`
+	Date      string   `json:"date"`
+	Prods     []ProdOr `json:"orprod"`
 }

@@ -150,3 +150,44 @@ func GetUserIn(id string) strs.UserTop {
 
 	return usr
 }
+
+func GetProfile(base strs.Profile) strs.Profile {
+	row, err := db.Query("SELECT name, username, email, password")
+	if err != nil {
+		panic(err)
+	}
+	for row.Next() {
+		err := row.Scan(&base.Base.Name, &base.Base.UserName, &base.Base.Email, &base.Base.Password)
+		if err != nil {
+			panic(err)
+		}
+	}
+	base.Base.ProfilePic = "./anonymousprofile"
+
+	row, err = db.Query("CALL getusorder(?)", base.Base.ID)
+	if err != nil {
+		panic(err)
+	}
+	var orders strs.OrderSim
+	for row.Next() {
+		err := row.Scan(&orders.ID, &orders.PaydetID, &orders.Status, &orders.Paystatus, &orders.Total, &orders.Date)
+		if err != nil {
+			panic(err)
+		}
+		row1, err := db.Query("CALL getusorderdet(?)", orders.ID)
+		if err != nil {
+			panic(err)
+		}
+		var prods strs.ProdOr
+		for row1.Next() {
+			err := row1.Scan(&prods.ID, &prods.Name, &prods.Quantity, &prods.SPrice, &prods.TPrice, &prods.Imgpath)
+			if err != nil {
+				panic(err)
+			}
+			orders.Prods = append(orders.Prods, prods)
+		}
+		base.Orders = append(base.Orders, orders)
+	}
+
+	return base
+}

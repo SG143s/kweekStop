@@ -63,3 +63,19 @@ func CheckAuth(em string, ps string) bool {
 	}
 
 }
+
+func CheckOwner(uid string, shid string) bool {
+	result, err := db.Query("CALL checkownership(?, ?)", uid, shid)
+	if err != nil {
+		panic(err)
+	}
+	var res bool
+	for result.Next() {
+		err = result.Scan(&res)
+		if err != nil {
+			panic(err)
+		}
+	}
+
+	return res
+}
