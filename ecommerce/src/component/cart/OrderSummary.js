@@ -8,7 +8,84 @@ const midtransClient = require('midtrans-client');
 
 const OrderSummary = ({items}) => {
     const totalPrice = items.reduce((sum, item) => sum + parseInt(item.price)*parseInt(item.quantity), 0);
-    const totalOrder = totalPrice + parseInt(30000);
+    const totalOrder = totalPrice - parseInt(10000);
+
+    const [cities, setCities] = useState([]);
+    const [originCity, setOriginCity] = useState("");
+  
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch('/api/deliveryservice/getCityID');
+          const data = await response.json();
+          if (response.ok) {
+            setCities(data.data.rajaongkir.results);
+          } else {
+            console.error(data.message);
+          }
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      };
+  
+      fetchData();
+    }, []);
+  
+    useEffect(() => {
+      if (cities.length > 0) {
+        setOriginCity(cities[500]);
+      }
+    }, [cities]);
+
+    const [destinationCity, setDestinationCity] = useState(null);
+
+    useEffect(() => {
+        console.log("destination city: ", destinationCity);
+      }, [destinationCity]);
+  
+const [costFee, setCostFee] = useState('');
+
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      if (destinationCity) {
+        const requestData = {
+          origin: originCity.city_id,
+          destination: destinationCity.city_id,
+          weight: 1700,
+          courier: 'jne',
+        };
+
+        console.log("requestdata: ", requestData);
+
+        const response = await fetch('/api/deliveryservice/getFee', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(requestData),
+        });
+
+        const data = await response.json();
+        console.log("cost fee: ", data);
+        setCostFee(data.data.rajaongkir.results[0].costs[0].cost[0].value);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  fetchData();
+}, [destinationCity]);
+
+const handleDestinationCityChange = (event) => {
+  const selectedCityId = event.target.value;
+  const selectedCity = cities.find((city) => city.city_id === selectedCityId);
+  setDestinationCity(selectedCity);
+  console.log("destinationcity: ", destinationCity);
+};
+
+
 
      // make isLoading useState
     const [isLoading, setIsLoading] = useState(false);
@@ -64,7 +141,7 @@ const OrderSummary = ({items}) => {
                 body: JSON.stringify({
                     transaction_details: {
                         order_id: random_order_id(10, 'xxxx-xxxx-xxxx'),
-                        gross_amount: totalOrder
+                        gross_amount: totalOrder+costFee
                     },
                     credit_card: {
                         secure: true
@@ -116,6 +193,7 @@ const OrderSummary = ({items}) => {
                                 payment_type: result.payment_type, // ganti dengan nilai yang sesuai
                                 status_code: result.status_code,
                                 gross_amount: result.gross_amount,
+                                items
                               }),
                             });
                         
@@ -158,7 +236,7 @@ const OrderSummary = ({items}) => {
                         </div>
                         <div className='shipping'>
                             <p className='shipping-label'>Shipping</p>
-                            <p className='shipping-price'>+Rp40.000,-</p>
+                            <p className='shipping-price'>+Rp{parseInt(costFee).toLocaleString('en-US', { useGrouping: true }).replace(',', '.')},-</p>
                         </div>
                         <div className='discount'>
                             <p className='discount-label'>Discount</p>
@@ -167,10 +245,34 @@ const OrderSummary = ({items}) => {
                     </div>
                     <hr></hr>
                 </div>
+                <div className='ongkirraja'>
+                    <label htmlFor="originCity">Kota Asal:</label>
+                    <select id="originCity" value={originCity.city_id} disabled>
+                        {cities.map((city) => (
+                        <option key={city.city_id} value={city.city_id}>
+                            {city.city_name}
+                        </option>
+                        ))}
+                    </select>
+
+                    <label htmlFor="destinationCity">Kota Destinasi:</label>
+                    <select
+                        id="destinationCity"
+                        value={destinationCity ? destinationCity.city_id : ''}
+                        onChange={handleDestinationCityChange}
+                    >
+                        <option value="">Pilih kota destinasi</option>
+                        {cities.map((city) => (
+                        <option key={city.city_id} value={city.city_id}>
+                            {city.city_name}
+                        </option>
+                        ))}
+                    </select>
+                    </div>
                 <div className='order-sum-bottom'>
                     <div className='total'>
                             <p className='total-label'><strong>Total</strong></p>
-                            <p className='total-price'><strong>Rp{parseInt(totalOrder).toLocaleString('en-US', { useGrouping: true }).replace(',', '.')},-</strong></p>
+                            <p className='total-price'><strong>Rp{parseInt(totalOrder+costFee).toLocaleString('en-US', { useGrouping: true }).replace(',', '.')},-</strong></p>
                     </div>
                     <button className='checkout-button' onClick={handlePay} >Checkout</button>
                 </div>

@@ -119,7 +119,7 @@ const Cart = ({ products }) => {
                 <div className="single-product-cart-detail">
                   <p className="product-title">{p.productname}</p>
                   <p className="order-id">{p.shopid}</p>
-                  <p>{p.imagepath}</p>
+                  {/* <p>{p.imagepath}</p> */}
                   <p className="variation-pick">
                     <strong>Variation:</strong> 1 Set
                   </p>

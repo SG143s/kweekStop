@@ -4,7 +4,7 @@ const prisma = new PrismaClient();
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { userid, order_id, transaction_id, payment_type, status_code, gross_amount } = req.body;
+    const { userid, order_id, transaction_id, payment_type, status_code, gross_amount, items } = req.body;
 
     const status = "paid";
 
