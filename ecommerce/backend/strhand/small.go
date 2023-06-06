@@ -89,3 +89,19 @@ type CartOp struct {
 	Base ProdCAdd `json:"base"`
 	Op   string   `json:"operation"`
 }
+
+type ProdOr struct {
+	ID       string  `json:"pid"`
+	Name     string  `json:"pname"`
+	Quantity int     `json:"pquan"`
+	SPrice   float32 `json:"singleprice"`
+	TPrice   float32 `json:"tprice"`
+	Imgpath  string  `json:"pimg"`
+}
+
+type OrderSim struct {
+	ID     string   `json:"orid"`
+	Status string   `json:"orstat"`
+	Total  float32  `json:"ortot"`
+	Prods  []ProdOr `json:"orprod"`
+}
