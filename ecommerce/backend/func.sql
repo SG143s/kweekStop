@@ -263,3 +263,22 @@ username = nusername,
 password = npassword
 WHERE id = uid;
 
+getprodcart
+    parameter:uid
+SELECT DISTINCT
+product.id, product.productname, cart.quantity,
+(
+    SELECT price
+    FROM product
+    WHERE product.id = cart.productid
+) as sprice,
+(
+    SELECT price
+    FROM product
+    WHERE product.id = cart.productid
+) * cart.quantity as tprice,
+(SELECT productimg.imagepath from productimg where productimg.productid = product.id limit 1) as img
+FROM product 
+join cart on product.id = cart.productid
+join productimg on productimg.productid = product.id
+WHERE cart.userid = uid;

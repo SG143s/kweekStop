@@ -188,6 +188,36 @@ func GetProfile(base strs.Profile) strs.Profile {
 		}
 		base.Orders = append(base.Orders, orders)
 	}
+	row, err = db.Query("CALL getshopown(?)", base.Base.ID)
+	if err != nil {
+		panic(err)
+	}
 
+	var shops strs.ShopSim
+	for row.Next() {
+		err := row.Scan(&shops.ID, &shops.Name, &shops.Rate)
+		if err != nil {
+			panic(err)
+		}
+		base.Shops = append(base.Shops, shops)
+	}
 	return base
+}
+
+func GetCart(uid string) strs.Cart {
+	var cart strs.Cart
+	var prod strs.ProdCart
+
+	row, err := db.Query("CALL getprodcart(?)", uid)
+	if err != nil {
+		panic(err)
+	}
+	for row.Next() {
+		err := row.Scan(&prod.ID, &prod.Name, &prod.Quantity, &prod.SPrice, &prod.ToPrice, &prod.Imgpath)
+		if err != nil {
+			panic(err)
+		}
+		cart.Data = append(cart.Data, prod)
+	}
+	return cart
 }

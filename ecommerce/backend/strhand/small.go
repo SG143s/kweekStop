@@ -73,11 +73,7 @@ type ProdCart struct {
 	Quantity int     `json:"quan"`
 	SPrice   float32 `json:"sprice"`
 	ToPrice  float32 `json:"tprice"`
-}
-
-type ShopCart struct {
-	Base  ShopSim    `json:"shopd"`
-	Items []ProdCart `json:"itemd"`
+	Imgpath  string  `json:"imgpath"`
 }
 
 type ProdCAdd struct {

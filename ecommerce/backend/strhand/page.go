@@ -34,7 +34,7 @@ type Shop struct {
 }
 
 type Cart struct {
-	Data []ShopCart `json:"data"`
+	Data []ProdCart `json:"data"`
 }
 
 type OrderCom struct {
