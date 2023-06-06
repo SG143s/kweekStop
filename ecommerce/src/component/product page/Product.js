@@ -14,10 +14,13 @@ import Footer from '../footer/TextFooter';
 import React, { useState } from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthContext';
+import { useRouter } from 'next/router';
 
 const Product = ({productdata}) => {
     const [amount, setAmount] = useState(1);
     const { loggedIn, userData } = useContext(AuthContext);
+
+    const router = useRouter();
 
     const decreaseAmount = () => {
         if (amount > 1) {
@@ -40,14 +43,32 @@ const Product = ({productdata}) => {
           });
     
           if (response.ok) {
-            // Cart item added successfully
             console.log('Item added to cart');
           } else {
-            // Handle error response
             console.error('Error adding item to cart');
           }
         } catch (error) {
-          // Handle network or other errors
+          console.error('Error adding item to cart', error);
+        }
+      };
+
+      const handleBuyNow = async () => {
+        try {
+          const response = await fetch('/api/cart', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ amount, productdata, userData }),
+          });
+    
+          if (response.ok) {
+            console.log('Item added to cart');
+            router.push(`/cart?id=${userData.id}`);
+          } else {
+            console.error('Error adding item to cart');
+          }
+        } catch (error) {
           console.error('Error adding item to cart', error);
         }
       };
@@ -67,7 +88,7 @@ const Product = ({productdata}) => {
                         <Image src="/png components/products/Rectangle 52.png" width={120} height={120} />
                     </div>
                     <div className='product-image-main'>
-                        <Image src="/png components/products/product-1.png" width={600} height={600} />
+                        <Image src={productdata.imagepath} width={600} height={600} />
                     </div>
                 </div>
                 <div className='product-detail-container'>
@@ -99,7 +120,7 @@ const Product = ({productdata}) => {
                                 <p>Add to Cart</p>
                             </div>
                         </div>
-                        <button className='buy-now' onClick={handleAddToCart}>Buy Now</button>
+                        <button className='buy-now' onClick={handleBuyNow}>Buy Now</button>
                     </div>
                 </div>
             </div>

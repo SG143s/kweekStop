@@ -18,6 +18,7 @@ const CategoriesMenu = (props) => {
         async function fetchData() {
             const response = await fetch("/api/products/categories");
             const data = await response.json();
+            // setCategories(data);
             setCategories(data.slice(21, 35));
         }
     

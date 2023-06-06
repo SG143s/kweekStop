@@ -10,6 +10,7 @@ export default async function handler(req, res) {
             FROM product
             JOIN categoryprod ON product.id = categoryprod.productid
             JOIN category ON category.id = categoryprod.categoryid
+            JOIN productimg ON productimg.productid = product.id
             WHERE product.id = ${id};
         `;
         

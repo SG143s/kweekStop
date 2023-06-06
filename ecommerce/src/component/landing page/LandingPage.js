@@ -11,7 +11,7 @@ import { AuthContext } from '../../../contexts/AuthContext';
 
 const LandingPage = (props) => {
     const { loggedIn, userData } = useContext(AuthContext);
-    console.log("loginkah? ", loggedIn);
+    // console.log("loginkah? ", loggedIn);
     
     return (
         <div>

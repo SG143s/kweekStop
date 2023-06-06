@@ -9,6 +9,7 @@ export default async function handler(req, res) {
             SELECT *
             FROM cart
             JOIN product ON product.id = cart.productid
+            JOIN productimg ON productimg.productid = product.id
             WHERE cart.userid = ${userid};
         `;
         

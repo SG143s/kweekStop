@@ -15,20 +15,20 @@ const ThumbnailProduct = ({product}) => {
     return (
         <div className="product-preview">
             {product.map((p) => (
-                <div className='product-review' key={p.productid} onClick={() => handleClick(p.productid)}>
+                <div className='product-review' key={p.base.pid} onClick={() => handleClick(p.base.pid)}>
                     <div className="product-img">
-                        <Image src="/png components/products/A white electronic device with a game controller on it..png" width={120} height={95} />
+                        <Image src={p.imgpath} width={120} height={95} />
                     </div>
                     <div className="product-detail">
-                        <p className='product-name'>{p.productname}</p>
-                        <p className='category'>{p.name}</p>
+                        <p className='product-name'>{p.base.pname}</p>
+                        <p className='category'>{p.base.pcat}</p>
                         <div className='feedback'>
-                            <p className='star'><AiFillStar />{(p.stock+2) % 5}</p>
-                            <p className='review'>| {p.stock}+ reviews</p>
+                            <p className='star'><AiFillStar />{p.base.prate}</p>
+                            <p className='review'>| {p.base.psrev}+ reviews</p>
                         </div>
                         <div className='product-price'>
-                            <p className='discount-price'>Rp{p.price},-</p>
-                            <p className='actual-price'>Rp{p.price * 1.3},-</p>
+                            <p className='discount-price'>Rp{p.discprice},-</p>
+                            <p className='actual-price'>Rp{p.base.orprice*1.2},-</p>
                         </div>
                     </div>
                 </div>

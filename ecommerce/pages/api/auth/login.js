@@ -1,19 +1,10 @@
-// const { PrismaClient } = require('@prisma/client')
-// const prisma = new PrismaClient()
-
-// export default async function handler(req, res) {
-//     const data = await prisma.product.findMany()
-//     return res.status(200).json(data)
-// }
-
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 export default async function handler(req, res) {
   try {
-    const { username, password } = req.body; // Assuming you are using POST request to send the form data
+    const { username, password } = req.body; 
     
-    // Query the database to check if the username and userpassword match any records
     const user = await prisma.users.findFirst({
       where: {
         username,
@@ -22,11 +13,8 @@ export default async function handler(req, res) {
     });
     
     if (user) {
-      // Username and password match, proceed with further logic
-      // You can perform additional operations or return a success response
       return res.status(200).json(user);
     } else {
-      // Username and password do not match
       return res.status(401).json({ error: 'Invalid credentials' });
     }
   } catch (error) {
@@ -36,4 +24,41 @@ export default async function handler(req, res) {
     await prisma.$disconnect();
   }
 }
+
+// import fetch from 'node-fetch';
+
+// export default async function handler(req, res) {
+//   try {
+//     // const { luname, lpass } = req.body;
+//     const { username, password } = req.body;
+//     const luname = username;
+//     const lpass = password;
+
+//     const apiUrl = 'http://localhost:8000/login';
+
+//     const response = await fetch(apiUrl, {
+//       method: 'POST',
+//       body: JSON.stringify({
+//         "luname": "bmulrooney8",
+//         "lpass": "MoQ7tnc7"
+//     }),
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//     });
+
+//     if (response.ok) {
+//       const data = await response.json();
+//       console.log("datarrrrrrrr:", data.profile)
+//       return res.status(200).json(data);
+//     } else {
+//       const errorData = await response.json();
+//       return res.status(401).json({ error: errorData.error });
+//     }
+//   } catch (error) {
+//     console.error(error);
+//     return res.status(500).json({ error: 'Internal Server Error' });
+//   }
+// }
+
 

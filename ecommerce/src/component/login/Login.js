@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { useRouter } from 'next/router';
 import { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthContext';
+import axios from 'axios';
+// import fetch from 'node-fetch';
 
 
 const Login = (props) => {
@@ -41,7 +43,24 @@ const Login = (props) => {
         console.error('Login failed:', data.error);
         setAutherror(true);
       }
-    };
+    };   
+    
+    // const luname = username;
+    // const lpass = password;
+
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    
+    //     try {
+    //       const res = await axios.post("http://localhost:8000/login", {
+    //         luname,
+    //         lpass,
+    //       });
+    //       console.log(Response.data);
+    //     } catch (error) {
+    //       console.error(error);
+    //     }
+    //   };
 
 
     return (

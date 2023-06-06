@@ -14,14 +14,14 @@ func RegUs(c *gin.Context) {
 	session = SessTry(session)
 	var info strs.UserInfo
 	if err := c.ShouldBindJSON(&info); err != nil {
-		c.JSON(400, gin.H{"error": "Invalid request"})
+		c.JSON(400, gin.H{"error": "Invalid requestt"})
 		return
 	}
 	ent := sqop.UsRegis(info)
 	if ent {
 		c.Redirect(302, "/login")
 	} else {
-		c.JSON(400, gin.H{"error": "Invalid request"})
+		c.JSON(400, gin.H{"error": "Invalid requestst"})
 	}
 }
 

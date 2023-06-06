@@ -27,21 +27,21 @@ const ProductGroup = ({titleGroup}) => {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch("/api/products");
+            const response = await fetch("/api/products/products");
             const data = await response.json();
             let filteredData = data;
 
             if (titleGroup=="Hot deals") {
-                filteredData = data.filter(product => product.price > 900000);
+                filteredData = data.filter(product => product.base.orprice > 900000);
             } else if (titleGroup=="What's new?") {
                 filteredData = data.slice(-20); 
             } else if (titleGroup=="Under 100k") {
-                filteredData = data.filter(product => product.price < 100000);
+                filteredData = data.filter(product => product.discprice < 100000);
             }
 
             const formattedData = filteredData.map(product => ({
                 ...product,
-                price: parseInt(product.price).toLocaleString('en-US', { useGrouping: true }).replace(',', '.'),
+                discprice: parseInt(product.discprice).toLocaleString('en-US', { useGrouping: true }).replace(',', '.'),
             }));
             setProducts(formattedData);
         }

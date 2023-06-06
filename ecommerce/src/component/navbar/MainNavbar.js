@@ -17,13 +17,21 @@ const MainNavbar = ({items}) => {
       router.push(`/cart?id=${userId}`);
   };
 
+  const handleProductClick = () => {
+    router.push(`/products`);
+  };
+
+  const handleNavbarClick = () => {
+    router.push(`/`)
+  }
+
   console.log(loggedIn); // true or false
   console.log(userData); // user data object
 
   return (
     <header>
       <nav className="navbar-header">
-        <div className="main-logo">
+        <div className="main-logo" onClick={handleNavbarClick}>
           <Image src="/png components/Main Logo.png" width={150} height={30} />
         </div>
         <div className="navbar-menu">
@@ -31,7 +39,7 @@ const MainNavbar = ({items}) => {
             <p clasname="categories-navbar"><span>Categories</span><FaAngleDown /></p>
             <div className="dropdown-categories"><CategoriesMenu></CategoriesMenu></div>
           </div>
-          <p className="product-us">Products</p>
+          <p className="product-us" onClick={handleProductClick}>Products</p>
           <p className="about-us">About Us</p>
         </div>
         <div className="search-bar">

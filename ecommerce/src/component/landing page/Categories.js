@@ -22,13 +22,19 @@ const Categories = (props) => {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch("/api/products/categories");
-            const data = await response.json();
+          const response = await fetch("/api/products/categories");
+          const data = await response.json();
+      
+          if (Array.isArray(data)) {
             setCategories(data.slice(0, 20));
+          } else {
+            // Handle the case where data is not an array
+            console.error("Data is not an array:", data);
+          }
         }
-    
+      
         fetchData();
-    }, []);
+      }, []);
 
     return (
         <div>
