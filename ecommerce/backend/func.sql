@@ -152,7 +152,11 @@ orderdetails.productid, product.productname, orderdetails.quantity,
     FROM product
     WHERE product.id = orderdetails.productid
 ) as sprice,
-SUM(sprice * orderdetails.quantity) as tprice,
+(
+    SELECT price
+    FROM product
+    WHERE product.id = orderdetails.productid
+) * orderdetails.quantity as tprice,
 (SELECT productimg.imagepath from productimg where productimg.productid = product.id limit 1) as img
 FROM product 
 join orderdetails on product.id = orderdetails.productid
