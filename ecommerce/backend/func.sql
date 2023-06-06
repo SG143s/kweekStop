@@ -90,3 +90,83 @@ cartop2
 cartop3
     parameter:pid, uid
     DELETE FROM cart WHERE userid = uid AND productid = pid;
+
+getshopown
+    parameter:uid
+    SELECT DISTINCT
+    shop.id,
+    shop.shopname,
+    (
+        SELECT ROUND(AVG(rating), 2)
+        FROM userreview
+        WHERE productid = (
+                SELECT product.id
+                FROM product
+                WHERE shopid = shop.id
+                LIMIT 1
+            )
+        LIMIT 1
+    )
+    FROM
+        shop
+        JOIN product ON shop.id = product.shopid
+        JOIN userreview ON userreview.productid = product.id
+    WHERE
+        shop.ownerid = uid;
+
+getusinfo
+    parameter:uid
+    SELECT name, username, email FROM users where id = uid;
+
+getusorder
+    parameter:uid
+SELECT 
+    orders.id, 
+    (
+        SELECT status
+        FROM paymentdetails
+        WHERE paymentdetails.id = orders.paydetid
+    ) AS status,
+    (
+        SELECT total
+        FROM paymentdetails
+        WHERE paymentdetails.id = orders.paydetid
+    ) AS total
+FROM 
+    orders
+    JOIN paymentdetails ON orders.paydetid = paymentdetails.id
+WHERE orders.userid = uid;
+
+getusorderdet
+    parameter:oid
+SELECT
+orderdetails.productid, orderdetails.quantity,
+(
+    SELECT price
+    FROM product
+    WHERE product.id = orderdetails.productid
+) as sprice,
+SUM(sprice * orderdetails.quantity) as tprice,
+
+
+TRIGGER:
+    NAME: total
+    EVENT: after insert on orderdetails
+    QUERY:
+UPDATE paymentdetails 
+SET total = (
+    total + (
+        SELECT SUM(new.quantity * (
+            SELECT price
+            FROM product
+            WHERE product.id = new.productid
+        ))
+        FROM orderdetails
+        JOIN product ON orderdetails.productid = product.id
+    )
+)
+WHERE paymentdetails.id = (
+    SELECT paydetid
+    FROM orders
+    WHERE orders.id = new.orderid
+);

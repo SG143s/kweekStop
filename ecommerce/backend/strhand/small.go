@@ -48,7 +48,7 @@ type reviews struct {
 	Review   string  `json:"urev"`
 }
 
-type shopSim struct {
+type ShopSim struct {
 	ID   string  `json:"sid"`
 	Name string  `json:"sname"`
 	Img  string  `json:"simg"`
@@ -59,11 +59,11 @@ type ProdCom struct {
 	Base     ProdBase `json:"pbase"`
 	Imgpaths []string `json:"imgpaths"`
 	Desc     string   `json:"pdesc"`
-	Shop     shopSim  `json:"sbase"`
+	Shop     ShopSim  `json:"sbase"`
 }
 
 type shopCom struct {
-	Base    shopSim `json:"sbase"`
+	Base    ShopSim `json:"sbase"`
 	Address string  `json:"saddr"`
 }
 
@@ -76,7 +76,7 @@ type ProdCart struct {
 }
 
 type ShopCart struct {
-	Base  shopSim    `json:"shopd"`
+	Base  ShopSim    `json:"shopd"`
 	Items []ProdCart `json:"itemd"`
 }
 
