@@ -1,0 +1,82 @@
+.arrow-right, .home-btn, .products-btn, .orders-btn {
+    border:none;
+    background-color: transparent;
+    outline: none;
+    padding:17px 10px 17px 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow-right:hover, .home-btn:hover, .products-btn:hover, .orders-btn:hover {
+    background-color: rgb(213, 212, 212);
+}
+
+.divider {
+    border: 1px solid rgb(213, 212, 212);
+    width: 100%;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    height: fit-content;
+    width: fit-content;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+}
+
+.sidebar.expanded {
+    width: 150px; /* Adjust the width as per your requirement */
+  }
+  
+
+.icon-navbar-left {
+    width: 3vh;
+    height: 3vh;
+    margin-right: 10px;  
+    transition: transform 0.3s ease;
+}
+
+.icon-navbar-left.expanded {
+    width: 4vh;
+    height: 4vh;
+    margin-right: 10px;  
+    transition: transform 0.3s ease;
+}
+
+.icon-navbar-left-arrow {
+    width: 3vh;
+    height: 3vh;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.icon-arrow-down {
+    width: 3vh;
+    height: 3vh;
+    margin-left: 100px;
+}
+
+.icon-navbar-left-arrow.expanded {
+    transform: rotate(180deg);
+}
+
+.icon-text {
+    display: none;   
+}
+
+.icon-text.show {
+    transition: width 0.3s ease;
+    display: flex;  
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 3px;
+    padding-top: 3px;
+    font-weight: 600;
+    /* font-size: 15px; */
+}

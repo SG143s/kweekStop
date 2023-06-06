@@ -1,0 +1,51 @@
+.home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: absolute;
+}
+
+.products-icon, .reports-icon {
+    width: 150px;
+    height: 120px;
+    margin: 0 50px 0 50px;
+    color: #FD9C0B;
+}
+
+.orders-icon {
+    width: 150px;
+    height: 98px;
+    padding-top: 8px;
+    margin: 0 50px 14px 50px;
+    color: #FD9C0B;
+}
+
+.orders, .products, .reports {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin-top: -20vh;
+    margin-right: 4vh ;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 2vh;
+    transition: transform 0.3s;
+    transition-delay: 0.2s;
+}
+
+.orders:hover , .products:hover , .reports:hover {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+.orders span, .products span, .reports span {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: medium;
+}

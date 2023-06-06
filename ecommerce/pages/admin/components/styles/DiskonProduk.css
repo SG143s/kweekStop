@@ -1,0 +1,180 @@
+.add.discount{
+    width: fit-content ;
+}
+
+.container{
+    margin: 3vh;
+}
+
+.input-kode-diskon{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+.input-kode-diskon p{
+    color: #06152B;
+    font-family: 'DM Sans', sans-serif;
+    margin-right: 16vh;
+}
+
+.input-kode-diskon form{
+    margin-top: 1vh;
+    border: none;
+}
+
+.input-kode-diskon input{
+    outline: none;
+    border: none;
+    font-size: 14px;
+    color: #06152B;
+    font-family: 'DM Sans', sans-serif;
+    border-bottom: 1px solid black;
+    padding-bottom:7px;
+    margin-top:7px;
+    width: 75vh;
+}
+
+.input-nilai-diskon{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+.input-nilai-diskon p{
+    color: #06152B;
+    font-family: 'DM Sans', sans-serif;
+    margin-right: 8vh;
+}
+
+.input-nilai-diskon form{
+    border: none;
+}
+
+.input-nilai-diskon input{
+    outline: none;
+    border: none;
+    font-size: 14px;
+    color: #06152B;
+    font-family: 'DM Sans', sans-serif;
+    border-bottom: 1px solid black;
+    padding-bottom:7px;
+    margin-top:7px;
+    width: 75vh;
+}
+
+.input-tanggal-berlaku{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+.input-tanggal-berlaku p{
+    color: #06152B;
+    font-family: 'DM Sans', sans-serif;
+    margin-right: 8vh;
+}
+
+.input-tanggal-berlaku form{
+    border: none;
+}
+
+.input-tanggal-berlaku input{
+    outline: none;
+    border: none;
+    font-size: 14px;
+    color: #06152B;
+    font-family: 'DM Sans', sans-serif;
+    border-bottom: 1px solid black;
+    padding-bottom:7px;
+    margin-top:7px;
+    width: 75vh;
+}
+
+.input-tanggal-berakhir{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+.input-tanggal-berakhir p{
+    color: #06152B;
+    font-family: 'DM Sans', sans-serif;
+    margin-right: 8vh;
+}
+
+.input-tanggal-berakhir form{
+    border: none;
+}
+
+.input-tanggal-berakhir input{
+    outline: none;
+    border: none;
+    font-size: 14px;
+    color: #06152B;
+    font-family: 'DM Sans', sans-serif;
+    border-bottom: 1px solid black;
+    padding-bottom:7px;
+    margin-top:7px;
+    width: 75vh;
+}
+
+.input-min-pembelian{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+.input-min-pembelian p{
+    color: #06152B;
+    font-family: 'DM Sans', sans-serif;
+    margin-right:13vh;
+}
+
+.input-min-pembelian form{
+    border: none;
+}
+
+.input-min-pembelian input{
+    outline: none;
+    border: none;
+    font-size: 14px;
+    color: #06152B;
+    font-family: 'DM Sans', sans-serif;
+    border-bottom: 1px solid black;
+    padding-bottom:7px;
+    margin-top:7px;
+    width: 75vh;
+}
+
+.input-max-diskon{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+.input-max-diskon p{
+    color: #06152B;
+    font-family: 'DM Sans', sans-serif;
+    margin-right: 11.5vh;
+}
+
+.input-max-diskon form{
+    border: none;
+}
+
+.input-max-diskon input{
+    outline: none;
+    border: none;
+    font-size: 14px;
+    color: #06152B;
+    font-family: 'DM Sans', sans-serif;
+    border-bottom: 1px solid black;
+    padding-bottom:7px;
+    margin-top:7px;
+    width: 75vh;
+}
+
+.button-submit.diskon{
+
+}

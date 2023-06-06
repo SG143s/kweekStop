@@ -1,0 +1,147 @@
+.navbar-header,
+.navbar-menu,
+.search-bar,
+.navbar-left-side,
+.navbar-categories-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+.navbar-header {
+    margin: 20px 90px 20px 90px;
+    height: 40px;
+}
+
+.navbar-left-side {
+    width: 780px;
+}
+
+.navbar-menu p {
+    margin: 5px 25px 0px 50px;
+    font-size: 14px;
+}
+
+.navbar-categories-menu p svg {
+    margin-left: 10px;
+    transform: translateY(4px);
+}
+
+.search-bar{
+    margin-top: -9px;
+}
+
+.search-bar input {
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    width: 500px;
+    height: 25px;
+    padding-left: 17px;
+    border-right: none;
+    border: none;
+    background-color: rgb(245, 245, 245);
+}
+
+input, input:focus, input:hover, input:active {
+    outline: none;
+    box-shadow:none;
+}
+
+.search-bar .search-button {
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    height: 25px;
+    border-left: none;
+    width: 30px;
+    background-color: rgb(253, 156, 11);
+    color: white;
+    border: none;
+}
+
+.navbar-right-side .notification, .cust-service {
+    background-color: white;
+    border: none;
+    transform: scale(1.7);
+    margin-right: 35px;
+}
+
+.cust-service{
+    margin-top: 5px;
+}
+
+.navbar-right-side {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:-10px;
+}
+/*
+.login-signup button {
+    border-radius: 40px;
+    padding: 5px 40px 5px 40px;
+    margin-right: 20px;
+    border-color:rgb(253, 156, 11);
+    font-weight: 700;
+    box-shadow: none;
+} */
+
+.vertical-line{
+    border-left: 1px solid #E8E8E8;
+    height: 32px;
+    margin-right: 35px;
+}
+
+.profile-bar {
+    background-color: white;
+    border: none;
+    display: flex;
+    width: 110px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.profile-pict {
+    /* align-items: center; */
+    border-radius: 16px;
+}
+
+.username {
+    /* align-items: center; */
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+button.notification {
+    margin-top: 7px;
+}
+
+button, button:focus, button:hover, button:active {
+    outline: none;
+    box-shadow:none;
+}
+
+/* .login-signup .login {
+    color: rgb(253, 156, 11);
+    background-color: white;
+}
+
+.login-signup .signup {
+    color:rgb(245, 245, 245);
+    background-color: rgb(253, 156, 11);
+} */
+
+.navbar-line hr {
+    border: none;
+    /* height: 20px; */
+    /* width: 90%; */
+    height: 40px;
+    margin-top: 0;
+    border-bottom: 1px solid yellow;
+    box-shadow: 1px 12px 20px -20px rgb(122, 122, 122);
+    margin: -50px auto 10px; 
+}

@@ -45,6 +45,7 @@
     padding: 0px 5px 0px 5px;
     font-size: 15px;
     transform: translateY(10px);
+    text-align: center;
 }
 .footer-detail-join {
     text-align: left;
@@ -89,5 +90,5 @@
 
 .text-footer p.made-with-luv {
     font-size: 10px;
-    padding: 5px 0px 5px 0px;
+    padding: 10px 0px 10px 0px;
 }
