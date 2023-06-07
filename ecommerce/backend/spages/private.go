@@ -22,3 +22,15 @@ func Profile(c *gin.Context) {
 		c.JSON(200, Profile)
 	}
 }
+
+func Cart(c *gin.Context) {
+	session := sessions.Default(c)
+	logIn := au.ChAuth(session)
+	if !logIn {
+		c.JSON(401, gin.H{"error": "User Not Logged In"})
+	} else {
+		uid := session.Get("userId").(string)
+		Cart := sqop.GetCart(uid)
+		c.JSON(200, Cart)
+	}
+}
