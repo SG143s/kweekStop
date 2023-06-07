@@ -24,14 +24,29 @@
 
 .category-detail-container {
     text-align: left;
+    margin-right: 10px;
+    /* width: 70%; */
+    /* width: 100px; */
+    cursor: pointer;
+}
+
+.category-detail-container  p {
+    width: 80px;
 }
 
 .category-detail {
     margin-left: 30px;
     margin-right: 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
+    /* width: 0%; */
     transform: translateY(-17px);
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.category-detail::-webkit-scrollbar {
+    display: none;
 }
 
 .category-detail-container img {

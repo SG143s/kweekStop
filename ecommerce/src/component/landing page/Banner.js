@@ -5,8 +5,16 @@
 import './Banner.css';
 import Image from 'next/image';
 import ImageCard from '../ImageCard';
+// import { Link } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
+import { useRouter } from 'next/router';
 
 const Banner = (props) => {
+    const router = useRouter();
+
+    const handleClick = () => {
+        router.push(`/products`);
+    };
     
     return (
         <div>
@@ -16,7 +24,10 @@ const Banner = (props) => {
                     <p>Make transactions with ease and comfort,<br></br>
                     without worrying about any service fees. And<br></br>
                     the best part? <strong>It's FREE!</strong></p>
-                    <button className='browse-product'>Browse product</button>
+                    <button className='browse-product' onClick={handleClick}>Browse product</button>
+                    {/* <Link to="/products" className="browse-product">
+                        Browse product
+                    </Link> */}
                 </div>
                 <div className="cart-circle">
                     <Image src="/png components/Banner.png" width={420} height={202} />

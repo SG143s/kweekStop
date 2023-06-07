@@ -11,8 +11,68 @@ import { FaStar } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
 import Image from 'next/image';
 import Footer from '../footer/TextFooter';
+import React, { useState } from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../../../contexts/AuthContext';
+import { useRouter } from 'next/router';
 
-const Product = (props) => {
+const Product = ({productdata}) => {
+    const [amount, setAmount] = useState(1);
+    const { loggedIn, userData } = useContext(AuthContext);
+
+    const router = useRouter();
+
+    const decreaseAmount = () => {
+        if (amount > 1) {
+        setAmount(amount - 1);
+    }
+    };
+
+    const increaseAmount = () => {
+        setAmount(amount + 1);
+    };
+
+    const handleAddToCart = async () => {
+        try {
+          const response = await fetch('/api/cart', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ amount, productdata, userData }),
+          });
+    
+          if (response.ok) {
+            console.log('Item added to cart');
+          } else {
+            console.error('Error adding item to cart');
+          }
+        } catch (error) {
+          console.error('Error adding item to cart', error);
+        }
+      };
+
+      const handleBuyNow = async () => {
+        try {
+          const response = await fetch('/api/cart', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ amount, productdata, userData }),
+          });
+    
+          if (response.ok) {
+            console.log('Item added to cart');
+            router.push(`/cart?id=${userData.id}`);
+          } else {
+            console.error('Error adding item to cart');
+          }
+        } catch (error) {
+          console.error('Error adding item to cart', error);
+        }
+      };
+
     return (
         <div>
             <MainNavbar></MainNavbar>
@@ -28,17 +88,17 @@ const Product = (props) => {
                         <Image src="/png components/products/Rectangle 52.png" width={120} height={120} />
                     </div>
                     <div className='product-image-main'>
-                        <Image src="/png components/products/product-1.png" width={600} height={600} />
+                        <Image src={productdata.imagepath} width={600} height={600} />
                     </div>
                 </div>
                 <div className='product-detail-container'>
-                    <p className='brand-name'>NCAA</p>
-                    <p className='product-title'>NCAA Illinois Fighting Illini Circo Cheese Cutting Board & Tools Set - Brown</p>
+                    <p className='brand-name'>{productdata.name}</p>
+                    <p className='product-title'>{productdata.productname}</p>
                     <p className='star-review'>
                         <FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaRegStar />
-                        <span>104 reviews</span></p>
-                    <p className='product-price'>$5895</p>
-                    <p className='product-desc'>Reach out to the complex cheese lover in your life with the Circo Cheese Board by Picnic Time. On the surface, the Circo lulls you into thinking it's just a fun-loving, durable 10.2â€ (diameter) x 1.6â€ cheese cutting board. But inside, it's a full cheese board set sporting four stainless steel cheese tools with parawood handles. The Circo also features more than 81 square inches of cutting surface, made from parawood, an eco-friendly hardwood known for its rich grain and durability. A recessed moat neatly catches cheese brine or juice from cut fruit.</p>
+                        <span>{productdata.categoryid} reviews</span></p>
+                    <p className='product-price'>Rp{parseInt(productdata.price).toLocaleString('en-US', { useGrouping: true }).replace(',', '.')},-</p>
+                    <p className='product-desc'>{productdata.description}</p>
                     <div className='variation'>
                         <p className='variation-title'>Variation</p>
                         <form>
@@ -50,24 +110,24 @@ const Product = (props) => {
                     <div className='product-stock-cart'>
                         <div className='product-stock'>
                             <div className='product-plus-minus'>
-                                <FaMinusCircle className='minus-svg'/>
-                                <p className='product-amount'>0</p>
-                                <FaPlusCircle className='plus-svg'/>
+                                <FaMinusCircle className='minus-svg' onClick={decreaseAmount}/>
+                                <p className='product-amount'>{amount}</p>
+                                <FaPlusCircle className='plus-svg'onClick={increaseAmount} />
                             </div>
-                            <p className='current-stock'><span>8072</span> in stock</p>
-                            <div className='add-to-cart'>
+                            <p className='current-stock'><span>{productdata.stock - amount}</span> in stock</p>
+                            <div className='add-to-cart' onClick={handleAddToCart}>
                                 <FaShoppingCart />
                                 <p>Add to Cart</p>
                             </div>
                         </div>
-                        <button className='buy-now'>Buy Now</button>
+                        <button className='buy-now' onClick={handleBuyNow}>Buy Now</button>
                     </div>
                 </div>
             </div>
             <div className='product-more-detail-container'>
                 <div className='detail-header'>
                     <p className='additional-info'>Additional Information</p>
-                    <p className='product-reviews'>Reviews (104)</p>
+                    <p className='product-reviews'>Reviews ({productdata.categoryid})</p>
                 </div>
                 <hr className='detail-divider'></hr>
                 <div className='additional-detail'>
@@ -75,11 +135,11 @@ const Product = (props) => {
                         <tbody>
                             <tr className='number-of-pieces'>
                                 <th className='table-column'>Number of Pieces:</th>
-                                <td>3</td>
+                                <td>{productdata.stock}</td>
                             </tr>
                             <tr>
                                 <th className='table-column'>Weight:</th>
-                                <td>3.5</td>
+                                <td>{productdata.categoryid % 5 * 1.2} g</td>
                             </tr>
                         </tbody>
                     </table>

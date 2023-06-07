@@ -7,10 +7,23 @@ import CategoriesMenu from "./CategoriesMenu";
 import { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthContext';
 // import MainLogo from '../png components/Main Logo.png';
+import { useRouter } from 'next/router';
 
-const MainNavbar = (props) => {
-
+const MainNavbar = ({items}) => {
+  const router = useRouter();
   const { loggedIn, userData } = useContext(AuthContext);
+
+  const handleClick = (userId) => {
+      router.push(`/cart?id=${userId}`);
+  };
+
+  const handleProductClick = () => {
+    router.push(`/products`);
+  };
+
+  const handleNavbarClick = () => {
+    router.push(`/`)
+  }
 
   console.log(loggedIn); // true or false
   console.log(userData); // user data object
@@ -18,7 +31,7 @@ const MainNavbar = (props) => {
   return (
     <header>
       <nav className="navbar-header">
-        <div className="main-logo">
+        <div className="main-logo" onClick={handleNavbarClick}>
           <Image src="/png components/Main Logo.png" width={150} height={30} />
         </div>
         <div className="navbar-menu">
@@ -26,7 +39,7 @@ const MainNavbar = (props) => {
             <p clasname="categories-navbar"><span>Categories</span><FaAngleDown /></p>
             <div className="dropdown-categories"><CategoriesMenu></CategoriesMenu></div>
           </div>
-          <p className="product-us">Products</p>
+          <p className="product-us" onClick={handleProductClick}>Products</p>
           <p className="about-us">About Us</p>
         </div>
         <div className="search-bar">
@@ -38,7 +51,7 @@ const MainNavbar = (props) => {
           </form>
         </div>
         <div className="navbar-right-side">
-          <button className="cart"><AiOutlineShoppingCart/></button>
+          <button className="cart" onClick={() => handleClick(userData.id)}><AiOutlineShoppingCart/>{items ? <p className="item-num-cart">{items.length}</p> : <p className="item-num-cart">0</p> }</button>
         </div>
         {!loggedIn ? (
             <div className="login-signup">

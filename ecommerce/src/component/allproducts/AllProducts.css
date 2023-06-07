@@ -4,7 +4,7 @@
 }
 
 .allproduct-container .filter-container {
-    width: 50%;
+    width: 20%;
     text-align: left;
     margin-left: 70px;
     margin-top: 10%;;
@@ -33,7 +33,7 @@
 .product-container {
     margin: 20px;
     margin-left: 0px;
-    width: 290%;
+    width: 100%;
 }
 
 .thumbnail-products {

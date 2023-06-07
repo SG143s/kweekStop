@@ -537,27 +537,60 @@ self.__RSC_MANIFEST={
       "chunks": []
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
     "C:\\Users\\LENOVO\\Downloads\\kweekStop - Copy\\ecommerce\\src\\component\\register\\Register.css#": {
       "id": "./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/register/Register.css",
+=======
+    "C:\\Users\\LENOVO\\Downloads\\kweekStop - Copy\\ecommerce\\src\\component\\cart\\Cart.css#": {
+      "id": "./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/cart/Cart.css",
+      "name": "default",
+      "chunks": []
+    },
+    "C:\\Users\\LENOVO\\Downloads\\kweekStop - Copy\\ecommerce\\src\\component\\navbar\\MainNavbar.css#": {
+      "id": "./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/navbar/MainNavbar.css",
+>>>>>>> nisma
       "name": "default",
       "chunks": []
     },
     "C:\\Users\\LENOVO\\Downloads\\kweekStop - Copy\\ecommerce\\src\\component\\footer\\Footer.css#": {
       "id": "./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/footer/Footer.css",
+<<<<<<< HEAD
 =======
     "C:\\Users\\LENOVO\\Downloads\\kweekStop - Copy\\ecommerce\\src\\component\\login\\Login.css#": {
       "id": "./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/login/Login.css",
 >>>>>>> 95cca5c198b2c41dbe568685e9f72653bf56715e
+=======
+>>>>>>> nisma
       "name": "default",
       "chunks": []
     },
-    "C:\\Users\\LENOVO\\Downloads\\kweekStop - Copy\\ecommerce\\src\\component\\register\\Register.css#": {
-      "id": "./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/register/Register.css",
+    "C:\\Users\\LENOVO\\Downloads\\kweekStop - Copy\\ecommerce\\src\\component\\landing page\\Banner.css#": {
+      "id": "./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/landing page/Banner.css",
       "name": "default",
       "chunks": []
     },
-    "C:\\Users\\LENOVO\\Downloads\\kweekStop - Copy\\ecommerce\\src\\component\\login\\Login.css#": {
-      "id": "./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/login/Login.css",
+    "C:\\Users\\LENOVO\\Downloads\\kweekStop - Copy\\ecommerce\\src\\component\\landing page\\Categories.css#": {
+      "id": "./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/landing page/Categories.css",
+      "name": "default",
+      "chunks": []
+    },
+    "C:\\Users\\LENOVO\\Downloads\\kweekStop - Copy\\ecommerce\\src\\component\\landing page\\LandingPage.css#": {
+      "id": "./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/landing page/LandingPage.css",
+      "name": "default",
+      "chunks": []
+    },
+    "C:\\Users\\LENOVO\\Downloads\\kweekStop - Copy\\ecommerce\\src\\component\\landing page\\ProductGroup.css#": {
+      "id": "./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/landing page/ProductGroup.css",
+      "name": "default",
+      "chunks": []
+    },
+    "C:\\Users\\LENOVO\\Downloads\\kweekStop - Copy\\ecommerce\\src\\component\\landing page\\SimpleCategory.css#": {
+      "id": "./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/landing page/SimpleCategory.css",
+      "name": "default",
+      "chunks": []
+    },
+    "C:\\Users\\LENOVO\\Downloads\\kweekStop - Copy\\ecommerce\\src\\component\\allproducts\\AllProducts.css#": {
+      "id": "./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/allproducts/AllProducts.css",
       "name": "default",
       "chunks": []
     }

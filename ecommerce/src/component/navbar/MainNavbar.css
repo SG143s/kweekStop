@@ -159,6 +159,20 @@ input, input:focus, input:hover, input:active {
     border: none;
 }
 
+.navbar-right-side .cart{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-right-side p.item-num-cart {
+    font-size: 7px;
+    transform: translateY(-18px);
+    background-color: rgb(253, 156, 11);
+    padding: 2px;
+    color: white;
+    border-radius: 50px;
+}
+
 .navbar-right-side .cart {
     background-color: white;
     border: none;
@@ -214,11 +228,12 @@ button, button:focus, button:hover, button:active {
 
 .navbar-categories-menu:hover > .dropdown-categories {
     display: flex;
+    /* flex-wrap: wrap; */
     position: absolute;
 }
 
 .navbar-categories-menu {
-    display: grid;
+    display: flex;
 }
 
 .dropdown-categories {
@@ -226,33 +241,39 @@ button, button:focus, button:hover, button:active {
 }
 
 .categories-menu-div {
-    padding-left: 40%;
+    /* padding-left: 40%; */
 }
 
 .categories-menu {
+    width: 80%;
     text-align: left;
-    width: 100%;
-    padding: 0% 5% 1% 5%;
+    /* width: 100%; */
+    padding: 0% 5% 1% 15%;
     position: fixed;
     background-color: white;
     /* z-index: 1; */
     /* transform: translateY(20px); */
     margin-top: 30px;
     transform: translateX(-17%);
+    display: flex;
+    flex-wrap: wrap;
+    /* overflow-y: scroll; */
 }
 
-.categories-menu td {
+.categories-menu p {
     font-size: 12px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
+    padding-right: 10px;
     /* margin-right: 10%; */
     cursor: pointer;
+    width: 150px;
 }
 
-.categories-menu td:hover{
+.categories-menu p:hover{
     background-color: rgb(253, 156, 11);
-    border-radius: 50px;
+    border-radius: 5px;
     color: white;
 }
 

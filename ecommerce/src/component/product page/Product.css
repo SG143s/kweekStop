@@ -94,6 +94,7 @@
 .product-stock-cart .product-stock .add-to-cart {
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .product-stock-cart .product-stock .product-plus-minus {
@@ -220,3 +221,18 @@ table.additional-detail  {
     margin-top: 70px;
 }
 
+.variation input:hover{
+    background-color: rgb(253, 156, 11);
+    color: white;
+    cursor: pointer;
+}
+
+.variation input:focus {
+    background-color: rgb(253, 156, 11);
+    color: white;
+}
+
+.add-to-cart:hover{
+    color: white;
+    background-color: rgb(253, 156, 11);
+}

@@ -29,7 +29,7 @@ hr.select-cart-div {
 .product-in-cart {
     margin-left: 5%;
     margin-top: 20px;
-    width: 70%;
+    width: 50%;
 }
 
 .single-product-in-cart {
@@ -173,4 +173,8 @@ p.product-stock {
     padding-bottom: 6px;
     font-size: 13px;
     margin-top: 15px;
+}
+
+.product-stock {
+    width: 320px;
 }

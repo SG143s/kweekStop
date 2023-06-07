@@ -3,6 +3,7 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "/": "pages/index.js",
   "/login": "pages/login.js",
   "/register": "pages/register.js",
@@ -11,4 +12,11 @@
   "/login": "pages/login.js",
   "/register": "pages/register.js"
 >>>>>>> 95cca5c198b2c41dbe568685e9f72653bf56715e
+=======
+  "/cart": "pages/cart.js",
+  "/products": "pages/products.js",
+  "/api/products/products": "pages/api/products/products.js",
+  "/api/products/categories": "pages/api/products/categories.js",
+  "/": "pages/index.js"
+>>>>>>> nisma
 }

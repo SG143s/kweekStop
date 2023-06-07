@@ -5,8 +5,11 @@ import (
 )
 
 func UsRegis(info strs.UserInfo) bool {
-	_, err := db.Query("INSERT INTO users values (?, ?, ?, ?, ?, 'false', 0, ?)", info.ID, info.Name, info.UserName, info.Email, info.Password, info.ProfilePic)
-	return err == nil
+	_, err := db.Query("INSERT INTO users values (?, ?, ?, ?, ?, false, 0, ?)", info.ID, info.Name, info.UserName, info.Email, info.Password, info.ProfilePic)
+	if err != nil {
+		return false
+	}
+	return true
 }
 
 func CartAdd(info strs.ProdCAdd, uid string) bool {
