@@ -121,7 +121,15 @@ func Checkout(c *gin.Context) {
 		now := time.Now()
 		y, m, d := now.Date()
 		mint := int(m)
-		date := strconv.Itoa(y) + "-" + strconv.Itoa(mint) + "-" + strconv.Itoa(d)
+		var mstr string
+		var dstr string
+		if mint < 10 {
+			mstr = "0" + strconv.Itoa(mint)
+		}
+		if d < 10 {
+			dstr = "0" + strconv.Itoa(d)
+		}
+		date := strconv.Itoa(y) + "-" + mstr + "-" + dstr
 		var paydetid string
 		check = true
 		for check {
