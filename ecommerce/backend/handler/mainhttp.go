@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"github.com/gin-contrib/cors"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-contrib/sessions/cookie"
 	"github.com/gin-gonic/gin"
@@ -13,6 +14,8 @@ func Start() {
 	r := gin.Default()
 	store := cookie.NewStore([]byte("secret"))
 	r.Use(sessions.Sessions("mysession", store))
+	config := cors.DefaultConfig()
+	config.AllowAllOrigins = true
 
 	r.GET("/", pg.PaHome)
 	r.GET("/products", pg.PaProd)
