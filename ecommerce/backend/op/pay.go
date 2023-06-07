@@ -1,8 +1,6 @@
 package op
 
 import (
-	"fmt"
-
 	"github.com/midtrans/midtrans-go"
 	"github.com/midtrans/midtrans-go/snap"
 )
@@ -18,7 +16,7 @@ func Paytest(n int) string {
 
 	res, err := c.CreateTransaction(&r)
 	if err == nil {
-		fmt.Print(err)
+		panic(err)
 	}
 	return res.RedirectURL
 }
