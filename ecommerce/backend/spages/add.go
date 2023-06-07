@@ -1,6 +1,7 @@
 package spages
 
 import (
+	"fmt"
 	"strconv"
 	"time"
 
@@ -155,7 +156,8 @@ func Checkout(c *gin.Context) {
 			}
 		}
 		tot := int(sqop.GetTotP(paydetid))
-		res := op.Paytest(tot)
+		fmt.Println(tot)
+		res := op.Paytest(paydetid, tot)
 		c.Redirect(302, res)
 	}
 }

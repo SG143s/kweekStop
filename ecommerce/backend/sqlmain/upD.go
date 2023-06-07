@@ -30,7 +30,7 @@ func CartOp3(info strs.ProdCAdd, uid string) bool {
 }
 
 func AddOrder(uid string, oid string, date string, paydetid string) bool {
-	_, err := db.Query("INSERT INTO orders values (?, ?, ?, ?)", oid, uid, paydetid, date)
+	_, err := db.Query("INSERT INTO orders values (?, ?, ?, ?, 'pending')", oid, uid, paydetid, date)
 	return err == nil
 }
 
