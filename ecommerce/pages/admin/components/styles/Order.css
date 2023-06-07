@@ -8,7 +8,18 @@
     border: 1px solid #06152B;
     margin:5px;
     border-radius: 20px;
+    transition: background-color 0.3s;
 }
+
+.btn-navigation button:hover {
+    background-color: #eaeaea;
+  }
+  
+  .btn-navigation.order-page button.active {
+    background-color: #fd9c0b;
+    border: none;
+    color: #fff;
+  }
 
 .header-container {
     margin:3vh;

@@ -536,8 +536,13 @@ self.__RSC_MANIFEST={
       "name": "default",
       "chunks": []
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\ecommerce\\pages\\admin\\components\\styles\\Home.css#": {
-      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./pages/admin/components/styles/Home.css",
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\ecommerce\\pages\\admin\\components\\styles\\DiskonProduk.css#": {
+      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./pages/admin/components/styles/DiskonProduk.css",
+      "name": "default",
+      "chunks": []
+    },
+    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\ecommerce\\pages\\admin\\components\\styles\\Kategori.css#": {
+      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./pages/admin/components/styles/Kategori.css",
       "name": "default",
       "chunks": []
     },
@@ -551,33 +556,8 @@ self.__RSC_MANIFEST={
       "name": "default",
       "chunks": []
     },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\ecommerce\\pages\\admin\\components\\styles\\index.css#": {
-      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./pages/admin/components/styles/index.css",
-      "name": "default",
-      "chunks": []
-    },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\ecommerce\\src\\component\\footer\\Footer.css#": {
-      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./src/component/footer/Footer.css",
-      "name": "default",
-      "chunks": []
-    },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\ecommerce\\pages\\admin\\components\\styles\\Order.css#": {
-      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./pages/admin/components/styles/Order.css",
-      "name": "default",
-      "chunks": []
-    },
     "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\ecommerce\\pages\\admin\\components\\styles\\Products.css#": {
       "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./pages/admin/components/styles/Products.css",
-      "name": "default",
-      "chunks": []
-    },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\ecommerce\\pages\\admin\\components\\styles\\DiskonProduk.css#": {
-      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./pages/admin/components/styles/DiskonProduk.css",
-      "name": "default",
-      "chunks": []
-    },
-    "D:\\semester 4\\wirpl after uts\\kweekstop\\kweekStop - Copy (2) - Copy\\ecommerce\\pages\\admin\\components\\styles\\Kategori.css#": {
-      "id": "../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[1]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[14].use[2]!./pages/admin/components/styles/Kategori.css",
       "name": "default",
       "chunks": []
     }

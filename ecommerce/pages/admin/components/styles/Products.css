@@ -12,6 +12,17 @@
     border-radius: 10px;
 }
 
+.btn-navigation.produk-page button:hover {
+    background-color: #eaeaea;
+}
+
+  .btn-navigation.produk-page button.active {
+    background-color: #fd9c0b;
+    border: none;
+    color: #fff;
+  }
+
+
 .header-product {
     margin-left:3vh;
 }
