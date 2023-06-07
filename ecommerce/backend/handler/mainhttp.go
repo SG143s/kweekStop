@@ -16,6 +16,7 @@ func Start() {
 	r.Use(sessions.Sessions("mysession", store))
 	config := cors.DefaultConfig()
 	config.AllowAllOrigins = true
+	r.Use(cors.New(config))
 
 	r.GET("/", pg.PaHome)
 	r.GET("/products", pg.PaProd)
