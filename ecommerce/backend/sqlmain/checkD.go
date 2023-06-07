@@ -79,3 +79,35 @@ func CheckOwner(uid string, shid string) bool {
 
 	return res
 }
+
+func CheckOrderExist(uid string, oid string) bool {
+	result, err := db.Query("SELECT EXISTS(SELECT 1 FROM orders WHERE username = ? AND id = ? LIMIT 1)", uid, oid)
+	if err != nil {
+		panic(err)
+	}
+	var res bool
+	for result.Next() {
+		err = result.Scan(&res)
+		if err != nil {
+			panic(err)
+		}
+	}
+
+	return res
+}
+
+func CheckPayExist(paydetid string) bool {
+	result, err := db.Query("SELECT EXISTS(SELECT 1 FROM paymentdetails WHERE id = ? LIMIT 1)", paydetid)
+	if err != nil {
+		panic(err)
+	}
+	var res bool
+	for result.Next() {
+		err = result.Scan(&res)
+		if err != nil {
+			panic(err)
+		}
+	}
+
+	return res
+}

@@ -221,3 +221,18 @@ func GetCart(uid string) strs.Cart {
 	}
 	return cart
 }
+
+func GetTotP(paydetid string) float32 {
+	var tot float32
+	row, err := db.Query("SELECT total FROM paymentdetails where id = ?", paydetid)
+	if err != nil {
+		panic(err)
+	}
+	for row.Next() {
+		err := row.Scan(&tot)
+		if err != nil {
+			panic(err)
+		}
+	}
+	return tot
+}

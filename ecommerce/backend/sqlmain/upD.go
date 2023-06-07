@@ -28,3 +28,18 @@ func CartOp3(info strs.ProdCAdd, uid string) bool {
 	_, err := db.Query("CALL cartop3(?, ?)", uid, info.ID)
 	return err == nil
 }
+
+func AddOrder(uid string, oid string, date string, paydetid string) bool {
+	_, err := db.Query("INSERT INTO orders values (?, ?, ?, ?)", oid, uid, paydetid, date)
+	return err == nil
+}
+
+func AddPayDet(paydetid string) bool {
+	_, err := db.Query("INSERT INTO paymentdetails values (?, 0, 'unpaid')", paydetid)
+	return err == nil
+}
+
+func AddOrDet(oid string, pid string, quan int) bool {
+	_, err := db.Query("INSERT INTO orderdetails values (?, ?, ?, 'test')", oid, pid, quan)
+	return err == nil
+}
