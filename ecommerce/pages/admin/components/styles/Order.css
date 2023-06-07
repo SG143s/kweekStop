@@ -10,6 +10,10 @@
     border-radius: 20px;
 }
 
+.header-container {
+    margin:3vh;
+}
+
 .header-order {
     margin-left:3vh;
 }

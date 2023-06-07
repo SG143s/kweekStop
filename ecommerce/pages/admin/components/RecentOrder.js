@@ -3,7 +3,7 @@ import "./styles/Products.css";
 
 export default function RecentOrder(){
     return(
-        <div className="recent-order">
+        <div className="container">
             <div className="tabel recent-order">           
                 <h3>Recent Order</h3>
                 <table>

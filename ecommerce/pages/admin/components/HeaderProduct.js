@@ -1,17 +1,17 @@
 import "./styles/Products.css";
 
-export default function HeaderProduct() {
-    return(
-        <div className="header-product">
-            <div>
-                <h2>Produk</h2>
-            </div>
-            <div className="btn-navigation produk-page">
-                <button>Produk Saya</button>
-                <button>Tambah Produk</button>
-                <button>Kategori Produk</button>
-                <button>Diskon Produk</button>
-            </div>
-        </div>
-    );
+export default function HeaderProduct({ setActiveComponent }) {
+  return (
+    <div className="header-product">
+      <div>
+        <h2>Produk</h2>
+      </div>
+      <div className="btn-navigation produk-page">
+        <button onClick={() => setActiveComponent("produkSaya")}>Produk Saya</button>
+        <button onClick={() => setActiveComponent("addProduct")}>Tambah Produk</button>
+        <button onClick={() => setActiveComponent("kategoriProduk")}>Kategori Produk</button>
+        <button onClick={() => setActiveComponent("diskonProduk")}>Diskon Produk</button>
+      </div>
+    </div>
+  );
 }
