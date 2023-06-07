@@ -81,7 +81,7 @@ func CheckOwner(uid string, shid string) bool {
 }
 
 func CheckOrderExist(uid string, oid string) bool {
-	result, err := db.Query("SELECT EXISTS(SELECT 1 FROM orders WHERE username = ? AND id = ? LIMIT 1)", uid, oid)
+	result, err := db.Query("SELECT EXISTS(SELECT 1 FROM orders WHERE userid = ? AND id = ? LIMIT 1)", uid, oid)
 	if err != nil {
 		panic(err)
 	}
