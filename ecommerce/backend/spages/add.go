@@ -126,16 +126,16 @@ func Checkout(c *gin.Context) {
 		check = true
 		for check {
 			paydetid = op.RandStringRunes(3) + op.RandNumRunes(3)
-			check = sqop.CheckOrderExist(uid, oid)
+			check = sqop.CheckPayExist(paydetid)
 		}
 		var ent bool
 		ent = sqop.AddPayDet(paydetid)
 		if !ent {
-			c.JSON(400, gin.H{"error": "Invalid request"})
+			c.JSON(400, gin.H{"error": "Unable to add payment details"})
 		}
 		ent = sqop.AddOrder(uid, oid, date, paydetid)
 		if !ent {
-			c.JSON(400, gin.H{"error": "Invalid request"})
+			c.JSON(400, gin.H{"error": "Unable to add orders"})
 		}
 		cart := sqop.GetCart(uid)
 		for _, data := range cart.Data {
@@ -143,7 +143,7 @@ func Checkout(c *gin.Context) {
 			quan := data.Quantity
 			ent = sqop.AddOrDet(oid, pid, quan)
 			if !ent {
-				c.JSON(400, gin.H{"error": "Invalid request"})
+				c.JSON(400, gin.H{"error": "Unable to add order detail(s)"})
 			}
 		}
 		tot := int(sqop.GetTotP(paydetid))
