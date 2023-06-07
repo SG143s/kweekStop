@@ -1,6 +1,7 @@
 package spages
 
 import (
+	"strconv"
 	"time"
 
 	"github.com/gin-contrib/sessions"
@@ -119,8 +120,8 @@ func Checkout(c *gin.Context) {
 		}
 		now := time.Now()
 		y, m, d := now.Date()
-		var Date string
-		Date = y + "-" + int(m) + "-" + "d"
+		mint := int(m)
+		date := strconv.Itoa(y) + "-" + strconv.Itoa(mint) + "-" + strconv.Itoa(d)
 		var paydetid string
 		check = true
 		for check {
@@ -132,7 +133,7 @@ func Checkout(c *gin.Context) {
 		if !ent {
 			c.JSON(400, gin.H{"error": "Invalid request"})
 		}
-		ent = sqop.AddOrder(uid, oid, Date, paydetid)
+		ent = sqop.AddOrder(uid, oid, date, paydetid)
 		if !ent {
 			c.JSON(400, gin.H{"error": "Invalid request"})
 		}
