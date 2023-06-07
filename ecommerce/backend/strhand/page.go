@@ -1,25 +1,41 @@
 package strhand
 
 type Profile struct {
+	Base   UserInfo   `json:"prbase"`
+	Shops  []ShopSim  `json:"owshop"`
+	Orders []OrderSim `json:"usor"`
 }
 
 type Home struct {
 	Prof     UserTop   `json:"profile"`
-	PopCat   []catLink `json:"popcats"`
-	Popprod  []prodSim `json:"poprod"`
-	Newprod  []prodSim `json:"newprod"`
-	RandCat  []catLink `json:"rcats"`
-	Cheaprod []prodSim `json:"chprod"`
+	PopCat   []CatLink `json:"popcats"`
+	Popprod  []ProdSim `json:"poprod"`
+	Newprod  []ProdSim `json:"newprod"`
+	RandCat  []CatLink `json:"rcats"`
+	Cheaprod []ProdSim `json:"chprod"`
+}
+
+type Prods struct {
+	Prof UserTop   `json:"profile"`
+	Prod []ProdSim `json:"prods"`
 }
 
 type ProdP struct {
-	Base  prodCom   `json:"pcom"`
-	RelIt []prodSim `json:"rprod"`
+	Prof  UserTop   `json:"profile"`
+	Base  ProdCom   `json:"pcom"`
+	RelIt []ProdSim `json:"rprod"`
 	Rev   []reviews `json:"prev"`
 }
 
 type Shop struct {
 	Prof  UserTop   `json:"profile"`
 	Sh    shopCom   `json:"shopD"`
-	SProd []prodSim `json:"sProd"`
+	SProd []ProdSim `json:"sProd"`
+}
+
+type Cart struct {
+	Data []ProdCart `json:"data"`
+}
+
+type OrderCom struct {
 }

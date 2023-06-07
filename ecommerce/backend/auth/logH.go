@@ -4,7 +4,7 @@ import (
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 
-	sqop "github.com/SG143s/kweekStop/ecommerce/sqlop"
+	sqop "github.com/SG143s/kweekStop/ecommerce/sqlmain"
 	strs "github.com/SG143s/kweekStop/ecommerce/strhand"
 )
 

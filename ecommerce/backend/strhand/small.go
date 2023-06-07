@@ -7,22 +7,36 @@ type UserTop struct {
 	ProfilePic string `json:"prpic"`
 }
 
+type UserInfo struct {
+	ID         string `json:"uid"`
+	Name       string `json:"name"`
+	UserName   string `json:"usname"`
+	Email      string `json:"email"`
+	Password   string `json:"passw"`
+	ProfilePic string `json:"prpic"`
+}
+
 type LogInf struct {
 	Username string `json:"luname"`
 	Password string `json:"lpass"`
 }
 
-type prodSim struct {
+type ProdSim struct {
+	Base     ProdBase `json:"base"`
+	Imgpath  string   `json:"imgpath"`
+	DisPrice float32  `json:"discprice"`
+}
+
+type ProdBase struct {
 	ID       string  `json:"pid"`
 	Name     string  `json:"pname"`
-	Price    int     `json:"orprice"`
-	DisPrice int     `json:"discprice"`
+	Price    float32 `json:"orprice"`
 	Category string  `json:"pcat"`
 	Rating   float32 `json:"prate"`
 	SReview  int     `json:"psrev"`
 }
 
-type catLink struct {
+type CatLink struct {
 	ID   int    `json:"cid"`
 	Name string `json:"cname"`
 	Img  string `json:"cimg"`
@@ -34,20 +48,59 @@ type reviews struct {
 	Review   string  `json:"urev"`
 }
 
-type shopSim struct {
+type ShopSim struct {
 	ID   string  `json:"sid"`
 	Name string  `json:"sname"`
 	Img  string  `json:"simg"`
 	Rate float32 `json:"srate"`
 }
 
-type prodCom struct {
-	Base prodSim `json:"pbase"`
-	Desc string  `json:"pdesc"`
-	Shop shopSim `json:"sbase"`
+type ProdCom struct {
+	Base     ProdBase `json:"pbase"`
+	Imgpaths []string `json:"imgpaths"`
+	Desc     string   `json:"pdesc"`
+	Shop     ShopSim  `json:"sbase"`
 }
 
 type shopCom struct {
-	Base    shopSim `json:"sbase"`
+	Base    ShopSim `json:"sbase"`
 	Address string  `json:"saddr"`
+}
+
+type ProdCart struct {
+	ID       string  `json:"pid"`
+	Name     string  `json:"pname"`
+	Quantity int     `json:"quan"`
+	SPrice   float32 `json:"sprice"`
+	ToPrice  float32 `json:"tprice"`
+	Imgpath  string  `json:"imgpath"`
+}
+
+type ProdCAdd struct {
+	ID       string `json:"pid"`
+	Quantity int    `json:"quan"`
+}
+
+type CartOp struct {
+	Base ProdCAdd `json:"base"`
+	Op   string   `json:"operation"`
+}
+
+type ProdOr struct {
+	ID       string  `json:"pid"`
+	Name     string  `json:"pname"`
+	Quantity int     `json:"pquan"`
+	SPrice   float32 `json:"singleprice"`
+	TPrice   float32 `json:"tprice"`
+	Imgpath  string  `json:"pimg"`
+}
+
+type OrderSim struct {
+	ID        string   `json:"orid"`
+	PaydetID  string   `json:"payid"`
+	Status    string   `json:"orstat"`
+	Paystatus string   `json:"paystat"`
+	Total     float32  `json:"ortot"`
+	Date      string   `json:"date"`
+	Prods     []ProdOr `json:"orprod"`
 }
