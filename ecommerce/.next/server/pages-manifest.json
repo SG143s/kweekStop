@@ -3,6 +3,8 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/cart": "pages/cart.js",
-  "/api/transaction/pushCreate": "pages/api/transaction/pushCreate.js",
-  "/api/transaction/pushOrder": "pages/api/transaction/pushOrder.js"
+  "/products": "pages/products.js",
+  "/api/products/products": "pages/api/products/products.js",
+  "/api/products/categories": "pages/api/products/categories.js",
+  "/": "pages/index.js"
 }
