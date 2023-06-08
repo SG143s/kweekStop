@@ -98,7 +98,7 @@ const Login = (props) => {
                         <p>By creating an account, you agree to Kweekstop’s <a>Conditions of Use </a> and <a>Privacy Notice.</a></p>
                     </div>
                     <div className="have-account">
-                        <p>New Customer? <a href='http://localhost:3000/register'>Sign up</a></p>
+                        <p>New Customer? <a href='http://localhost:3001/register'>Sign up</a></p>
                     </div>
                 </div>
             </div>

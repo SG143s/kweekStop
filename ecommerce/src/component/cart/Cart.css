@@ -74,9 +74,29 @@ hr.select-cart-div {
     /* justify-content: space-between; */
 }
 
+.product-plus-minus-order {
+    text-align: center;
+    color: rgb(253, 156, 11);
+}
+
+p.order-latest-id {
+    margin-left: 90px;
+    font-size: 12px;
+    /* border: 1px rgb(253, 156, 11); */
+}
+
+.order-success {
+    display: absolute;
+    top: 0;
+}
+
 .product-plus-minus {
     display: flex;
     justify-content: space-between;
+}
+
+p.order-berhasil {
+    color: rgb(253, 156, 11);
 }
 
 .product-stock-cart .product-stock .product-plus-minus {

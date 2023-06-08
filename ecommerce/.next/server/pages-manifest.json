@@ -2,21 +2,10 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "/": "pages/index.js",
-  "/login": "pages/login.js",
-  "/register": "pages/register.js",
-  "/api/auth/login": "pages/api/auth/login.js"
-=======
-  "/login": "pages/login.js",
-  "/register": "pages/register.js"
->>>>>>> 95cca5c198b2c41dbe568685e9f72653bf56715e
-=======
-  "/cart": "pages/cart.js",
   "/products": "pages/products.js",
   "/api/products/products": "pages/api/products/products.js",
+  "/": "pages/index.js",
   "/api/products/categories": "pages/api/products/categories.js",
-  "/": "pages/index.js"
->>>>>>> nisma
+  "/api/products/[id]": "pages/api/products/[id].js",
+  "/single-product": "pages/single-product.js"
 }

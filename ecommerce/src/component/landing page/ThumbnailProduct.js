@@ -27,8 +27,9 @@ const ThumbnailProduct = ({product}) => {
                             <p className='review'>| {p.base.psrev}+ reviews</p>
                         </div>
                         <div className='product-price'>
+                            {/* <p className='discount-price'>Rp{parseInt(p.discprice).toLocaleString('en-US', { useGrouping: true }).replace(',', '.')},-</p> */}
                             <p className='discount-price'>Rp{p.discprice},-</p>
-                            <p className='actual-price'>Rp{p.base.orprice*1.2},-</p>
+                            <p className='actual-price'>Rp{parseInt(p.base.orprice*1.2).toLocaleString('en-US', { useGrouping: true }).replace(',', '.')},-</p>
                         </div>
                     </div>
                 </div>

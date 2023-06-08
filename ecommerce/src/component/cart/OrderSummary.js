@@ -2,6 +2,14 @@ import './Cart.css';
 import { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthContext';
+import { useRouter } from 'next/router';
+// import MainNavbar from "../navbar/MainNavbar";
+import Image from "next/image";
+import { FaPlusCircle } from "react-icons/fa";
+import { FaMinusCircle } from "react-icons/fa";
+// import { useState } from "react";
+// import "./Cart.css";
+// import OrderSummary from "./OrderSummary";
 
 // make midtrans client
 const midtransClient = require('midtrans-client');
@@ -12,6 +20,9 @@ const OrderSummary = ({items}) => {
 
     const [cities, setCities] = useState([]);
     const [originCity, setOriginCity] = useState("");
+    const [orderID, setorderID] = useState("");
+    const [orderSuccess, setOrderSuccess] = useState(false);
+    const router = useRouter();
   
     useEffect(() => {
       const fetchData = async () => {
@@ -193,14 +204,20 @@ const handleDestinationCityChange = (event) => {
                                 payment_type: result.payment_type, // ganti dengan nilai yang sesuai
                                 status_code: result.status_code,
                                 gross_amount: result.gross_amount,
-                                items
+                                items,
+                                costFee
                               }),
                             });
+
+                            setorderID(result.order_id);
                         
                             if (response.ok) {
                               const data = await response.json();
                               console.log('Success', data);
+                              setOrderSuccess(true);
                               // Lakukan tindakan setelah berhasil
+                              // const queryString = items.map(item => `orderId=${item.orderId}&productId=${item.productId}&quantity=${item.quantity}&deliveryId=${item.deliveryId}`).join('&');
+                              // router.push(`/order?${queryString}`);
                             } else {
                               const errorData = await response.json();
                               console.error('Error', errorData);
@@ -228,7 +245,14 @@ const handleDestinationCityChange = (event) => {
         <div>
             <div className="order-summary-container">
                 <div className='order-sum-top'>
-                    <p className='order-title'>Order Summary ({items.length} item)</p>
+                  {orderSuccess ?
+                  <div className='success-detail'>
+                    <p className='order-berhasil'>Order Berhasil</p>
+                    <p className='order-title'>Order Detail ({items.length} item)</p>
+                  </div>
+                  : 
+                  <p className='order-title'>Order Summary ({items.length} item)</p>
+                  }
                     <div className='order-top-detail'>
                         <div className='subtotal'>
                             <p className='subtotal-label'>Subtotal</p>
@@ -274,9 +298,71 @@ const handleDestinationCityChange = (event) => {
                             <p className='total-label'><strong>Total</strong></p>
                             <p className='total-price'><strong>Rp{parseInt(totalOrder+costFee).toLocaleString('en-US', { useGrouping: true }).replace(',', '.')},-</strong></p>
                     </div>
-                    <button className='checkout-button' onClick={handlePay} >Checkout</button>
+                    {orderSuccess ? 
+                      <button className='checkout-button' onClick={handlePay} >Re-Order</button>
+                    :
+                      <button className='checkout-button' onClick={handlePay} >Checkout</button>
+                    }
                 </div>
             </div>
+            {orderSuccess ? (
+              <div className='order-success'>
+                  <div className="cart-container">
+                  <div className="cart-header">Your Orders</div>
+                  <div className="select-all-products">
+                    <label htmlFor="allproducts">Latest Order</label>
+                  </div>
+                  {/* <p>Order Berhasil!</p> */}
+                  <p className='order-latest-id'>Order ID: {orderID}</p>
+                  {/* <p>Ke Kota: {destinationCity}</p> */}
+                  <hr className="select-cart-div"></hr>
+                  {items.map((p) => (
+                    <div className="product-in-cart">
+                        <div className="single-product-in-cart">
+                          <Image
+                            src={p.imagepath}
+                            width={200}
+                            height={200}
+                          />
+                          <div className="single-product-cart-detail">
+                            <p className="product-title">{p.productname}</p>
+                            <p className="order-id">{p.shopid}</p>
+                            {/* <p>{p.imagepath}</p> */}
+                            <p className="variation-pick">
+                              <strong>Variation:</strong> 1 Set
+                            </p>
+                            <div className="product-stock-cart">
+                              <div className="product-stock">
+                                <div className="product-plus-minus-order">
+                                  {/* <FaMinusCircle className="minus-svg" /> */}
+                                  <p className="product-amount">Quantity : {p.quantity}</p>
+                                  {/* <FaPlusCircle className="plus-svg" /> */}
+                                </div>
+                                <p className="price">
+                                  Rp{parseInt(p.price*p.quantity).toLocaleString("en-US", {
+                                    useGrouping: true,
+                                  })}
+                                  ,-
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div className='order-before'>
+                <div className="cart-container">
+                  <div className="cart-header">Your Orders</div>
+                  <div className="select-all-products">
+                    <label htmlFor="allproducts">Your order will appear here after you complete the checkout and payment process.</label>
+                  </div>
+                  </div>
+                  </div>
+            )
+            }
         </div>
     );
 };

@@ -4,7 +4,7 @@ const prisma = new PrismaClient();
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { userid, order_id, transaction_id, payment_type, status_code, gross_amount, items } = req.body;
+    const { userid, order_id, transaction_id, payment_type, status_code, gross_amount, items, costFee } = req.body;
 
     const status = "paid";
 
@@ -33,6 +33,28 @@ export default async function handler(req, res) {
           payserviceid: transaction_id,
         },
       });
+
+      const createdDeliveryService = await prisma.deliveryservice.create({
+        data: {
+          id: order_id,
+          name: "jne",
+          fee: costFee
+        },
+      });
+
+      console.log("items: ", items)
+
+      for (const item of items) {
+        const newOrderDetail = await prisma.orderdetails.create({
+          data: {
+            orderid: order_id,
+            productid: item.productid,
+            quantity: item.quantity,
+            deliveryid: order_id,
+          },
+        });
+        console.log('New order detail created:', newOrderDetail);
+      }
 
       res.status(200).json({ message: 'Success', order: createdOrder });
     } catch (error) {

@@ -162,15 +162,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-/******/ 		__webpack_require__.h = function() { return "78fb11274397f907"; }
-=======
-/******/ 		__webpack_require__.h = function() { return "0df8e38990d5f10a"; }
->>>>>>> 95cca5c198b2c41dbe568685e9f72653bf56715e
-=======
-/******/ 		__webpack_require__.h = function() { return "ddd3605b9f6ff877"; }
->>>>>>> nisma
+/******/ 		__webpack_require__.h = function() { return "446a69fd6232868e"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

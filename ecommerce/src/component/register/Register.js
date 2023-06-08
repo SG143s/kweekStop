@@ -121,7 +121,7 @@ const Register = (props) => {
                         <p>By creating an account, you agree to Kweekstop’s <a>Conditions of Use </a> and <a>Privacy Notice.</a></p>
                     </div>
                     <div className="have-account">
-                        <p>Already have an account? <a href='http://localhost:3000/login'>Log in</a></p>
+                        <p>Already have an account? <a href='http://localhost:3001/login'>Log in</a></p>
                     </div>
                 </div>
             </div>

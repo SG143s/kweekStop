@@ -11,6 +11,14 @@ import { useRouter } from 'next/router';
 
 const MainNavbar = ({items}) => {
   const router = useRouter();
+
+  function handleSearch(event) {
+    event.preventDefault();
+    // const router = useRouter();
+    const searchQuery = event.target.search.value;
+    router.push(`/products/search?search=${searchQuery}`);
+  }
+  
   const { loggedIn, userData } = useContext(AuthContext);
 
   const handleClick = (userId) => {
@@ -43,7 +51,7 @@ const MainNavbar = ({items}) => {
           <p className="about-us">About Us</p>
         </div>
         <div className="search-bar">
-          <form>
+          <form onSubmit={handleSearch}>
             <label>
               <input type="text" name="search" placeholder="search here" />
             </label>

@@ -4,11 +4,13 @@ import React from "react";
 import { useEffect, useState } from "react";
 import './AllProducts.css';
 
-const AllProducts = (props) => {
+const AllProducts = ({searchproducts}) => {
     const [isChecked, setIsChecked] = useState(false);
     const [products, setProducts] = useState([]);
 
       const [selectedOptions, setSelectedOptions] = useState([]);
+
+      console.log("searchproducts:",searchproducts);
 
   useEffect(() => {
     fetchData();
@@ -86,7 +88,8 @@ const AllProducts = (props) => {
                         <p>All Products</p>
                     </div>
                     <div className='thumbnail-products'>
-                        <ThumbnailProduct product={products}></ThumbnailProduct>
+                        {/* <ThumbnailProduct product={products}></ThumbnailProduct> */}
+                        <ThumbnailProduct product={searchproducts ? searchproducts : products} />
                     </div>
                 </div>
             </div>

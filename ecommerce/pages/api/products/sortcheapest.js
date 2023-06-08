@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 export default async function handler(req, res) {
   try {
-    const apiUrl = 'http://localhost:8000/products#sort=cheap';
+    const apiUrl = 'http://localhost:8000/products/sort/cheap';
 
     const response = await fetch(apiUrl, {
       method: 'GET',
