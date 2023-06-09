@@ -34,6 +34,7 @@ func Start() {
 	r.POST("/cart/del", pg.ButtonCart3)
 	r.POST("/register", pg.RegUs)
 	r.POST("/checkout", pg.Checkout)
+	r.POST("/product/add", pg.AddProd)
 
 	r.Run(":8000")
 }

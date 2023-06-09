@@ -62,6 +62,17 @@ type ProdCom struct {
 	Shop     ShopSim  `json:"sbase"`
 }
 
+type ProdAdd struct {
+	ID       string   `json:"pid"`
+	Name     string   `json:"pname"`
+	Price    float32  `json:"orprice"`
+	Category int      `json:"pcat"`
+	Stock    int      `json:"pstock"`
+	Imgpaths []string `json:"imgpaths"`
+	Desc     string   `json:"pdesc"`
+	ShopID   string   `json:"sid"`
+}
+
 type shopCom struct {
 	Base    ShopSim `json:"sbase"`
 	Address string  `json:"saddr"`

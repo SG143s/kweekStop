@@ -111,3 +111,19 @@ func CheckPayExist(paydetid string) bool {
 
 	return res
 }
+
+func CheckShopAuth(uid string, pid string) bool {
+	result, err := db.Query("SELECT EXISTS(SELECT 1 FROM shop WHERE id = ? AND ownerid = ? LIMIT 1)", pid, uid)
+	if err != nil {
+		panic(err)
+	}
+	var res bool
+	for result.Next() {
+		err = result.Scan(&res)
+		if err != nil {
+			panic(err)
+		}
+	}
+
+	return res
+}

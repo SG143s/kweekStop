@@ -46,3 +46,29 @@ func AddOrDet(oid string, pid string, quan int) bool {
 	_, err := db.Query("INSERT INTO orderdetails values (?, ?, ?, 'test')", oid, pid, quan)
 	return err == nil
 }
+
+func AddProd(uid string, prod strs.ProdAdd) bool {
+	var res bool
+
+	if CheckShopAuth(uid, prod.ShopID) {
+		_, err := db.Query("INSERT INTO shop values (?, ?, ?, ?, ?, ?)", prod.ID, prod.ShopID, prod.Name, prod.Desc, prod.Price, prod.Stock)
+		res = err == nil
+		if res {
+			_, err := db.Query("INSERT INTO categoryprod values (?, ?)", prod.Category, prod.ID)
+			res = err == nil
+			if res {
+				for _, data := range prod.Imgpaths {
+					_, err := db.Query("INSERT INTO productimg values (?, ?, 'link')", prod.ID, data)
+					res = err == nil
+					if !res {
+						break
+					}
+				}
+			}
+		}
+	} else {
+		res = false
+	}
+
+	return res
+}
