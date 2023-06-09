@@ -89,3 +89,18 @@ func PoProd(c *gin.Context) {
 	pjson = op.ProdGen(pjson, "pop")
 	c.JSON(200, pjson)
 }
+
+func ShProd(c *gin.Context) {
+	session := sessions.Default(c)
+	session = SessTry(session)
+	var pjson strs.Prods
+	logIn := au.ChAuth(session)
+	sid := c.Param("shop")
+	if !logIn {
+		pjson.Prof.Log = false
+	} else {
+		pjson.Prof = sqop.GetUserIn(session.Get("userId").(string))
+	}
+	pjson = op.ProdShop(pjson, sid)
+	c.JSON(200, pjson)
+}

@@ -19,3 +19,9 @@ func ProdGen(base strs.Prods, sort string) strs.Prods {
 
 	return base
 }
+
+func ProdShop(base strs.Prods, sid string) strs.Prods {
+	base.Prod = sq.Getshprod(sid)
+
+	return base
+}

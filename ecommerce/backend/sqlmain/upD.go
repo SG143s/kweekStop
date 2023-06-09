@@ -77,3 +77,8 @@ func AddShop(uid string, shop strs.ShopAdd) bool {
 	_, err := db.Query("INSERT INTO shop values (?, ?, ?, '', ?, ?, ?)", shop.Base.ID, uid, shop.Base.Name, shop.Address, shop.City, shop.Base.Img)
 	return err == nil
 }
+
+func DeleteProd(pid string) bool {
+	_, err := db.Query("DELETE FROM product WHERE id = ?", pid)
+	return err == nil
+}

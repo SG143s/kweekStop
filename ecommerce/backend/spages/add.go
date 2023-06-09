@@ -45,7 +45,9 @@ func CartAdd(c *gin.Context) {
 		ent := sqop.CartAdd(info, uid)
 		if !ent {
 			c.JSON(400, gin.H{"error": "Invalid request"})
+			return
 		}
+		c.JSON(200, gin.H{"status": "ok"})
 	}
 }
 
@@ -64,7 +66,9 @@ func ButtonCart1(c *gin.Context) {
 		ent := sqop.CartOp1(info, uid)
 		if !ent {
 			c.JSON(400, gin.H{"error": "Invalid request"})
+			return
 		}
+		c.JSON(200, gin.H{"status": "ok"})
 	}
 }
 
@@ -83,7 +87,9 @@ func ButtonCart2(c *gin.Context) {
 		ent := sqop.CartOp2(info, uid)
 		if !ent {
 			c.JSON(400, gin.H{"error": "Invalid request"})
+			return
 		}
+		c.JSON(200, gin.H{"status": "ok"})
 	}
 }
 
@@ -102,7 +108,9 @@ func ButtonCart3(c *gin.Context) {
 		ent := sqop.CartOp3(info, uid)
 		if !ent {
 			c.JSON(400, gin.H{"error": "Invalid request"})
+			return
 		}
+		c.JSON(200, gin.H{"status": "ok"})
 	}
 }
 
@@ -177,7 +185,9 @@ func AddProd(c *gin.Context) {
 		ent := sqop.AddProd(uid, info)
 		if !ent {
 			c.JSON(400, gin.H{"error": "Invalid request"})
+			return
 		}
+		c.JSON(200, gin.H{"status": "ok"})
 	}
 }
 
@@ -196,6 +206,34 @@ func AddShop(c *gin.Context) {
 		ent := sqop.AddShop(uid, info)
 		if !ent {
 			c.JSON(400, gin.H{"error": "Invalid request"})
+			return
 		}
+		c.JSON(200, gin.H{"status": "ok"})
+	}
+}
+
+func DeleteShop(c *gin.Context) {
+	session := sessions.Default(c)
+	logIn := au.ChAuth(session)
+	if !logIn {
+		c.JSON(401, gin.H{"error": "User Not Logged In"})
+	} else {
+		uid := session.Get("userId").(string)
+		var info string
+		if err := c.ShouldBindJSON(&info); err != nil {
+			c.JSON(400, gin.H{"error": "Invalid request"})
+			return
+		}
+		ent := sqop.CheckShopAuth(uid, sqop.GetProdShop(info))
+		if !ent {
+			c.JSON(401, gin.H{"error": "Unauthorized"})
+			return
+		}
+		ent = sqop.DeleteProd(info)
+		if !ent {
+			c.JSON(400, gin.H{"error": "Invalid request"})
+			return
+		}
+		c.JSON(200, gin.H{"status": "ok"})
 	}
 }

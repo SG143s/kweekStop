@@ -236,3 +236,38 @@ func GetTotP(paydetid string) float32 {
 	}
 	return tot
 }
+
+func GetProdShop(pid string) string {
+	var sid string
+	row, err := db.Query("SELECT shopid from product where id = ?", pid)
+	if err != nil {
+		panic(err)
+	}
+	for row.Next() {
+		err := row.Scan(&sid)
+		if err != nil {
+			panic(err)
+		}
+	}
+	return sid
+}
+
+func Getshprod(sid string) []strs.ProdSim {
+	var t1 strs.ProdSim
+	var t2 []strs.ProdSim
+
+	row, err := db.Query("CALL getprodbyshop(?)", sid)
+	if err != nil {
+		panic(err)
+	}
+
+	for row.Next() {
+		err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview, &t1.Imgpath)
+		if err != nil {
+			panic(err)
+		}
+		t1.DisPrice = t1.Base.Price
+		t2 = append(t2, t1)
+	}
+	return t2
+}
