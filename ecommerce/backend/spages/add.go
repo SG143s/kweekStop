@@ -212,7 +212,7 @@ func AddShop(c *gin.Context) {
 	}
 }
 
-func DeleteShop(c *gin.Context) {
+func DeleteProd(c *gin.Context) {
 	session := sessions.Default(c)
 	logIn := au.ChAuth(session)
 	if !logIn {
