@@ -5,7 +5,7 @@ import (
 )
 
 func UsRegis(info strs.UserInfo) bool {
-	_, err := db.Query("INSERT INTO users values (?, ?, ?, ?, ?, false, 0, ?)", info.ID, info.Name, info.UserName, info.Email, info.Password, info.ProfilePic)
+	_, err := db.Query("INSERT INTO users values (?, ?, ?, ?, ?, ?, ?)", info.ID, info.Name, info.UserName, info.Email, info.Password, info.Address, info.ProfilePic)
 	if err != nil {
 		return false
 	}

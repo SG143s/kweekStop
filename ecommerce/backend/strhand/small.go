@@ -14,6 +14,7 @@ type UserInfo struct {
 	Email      string `json:"email"`
 	Password   string `json:"passw"`
 	ProfilePic string `json:"prpic"`
+	Address    string `json:"uadd"`
 }
 
 type UserReg struct {
@@ -22,6 +23,7 @@ type UserReg struct {
 	Email      string `json:"email"`
 	Password   string `json:"passw"`
 	ProfilePic string `json:"prpic"`
+	Address    string `json:"uadd"`
 }
 
 type LogInf struct {
