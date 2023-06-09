@@ -16,6 +16,14 @@ type UserInfo struct {
 	ProfilePic string `json:"prpic"`
 }
 
+type UserReg struct {
+	Name       string `json:"name"`
+	UserName   string `json:"usname"`
+	Email      string `json:"email"`
+	Password   string `json:"passw"`
+	ProfilePic string `json:"prpic"`
+}
+
 type LogInf struct {
 	Username string `json:"luname"`
 	Password string `json:"lpass"`

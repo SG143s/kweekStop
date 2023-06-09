@@ -17,12 +17,29 @@ import (
 func RegUs(c *gin.Context) {
 	session := sessions.Default(c)
 	session = SessTry(session)
-	var info strs.UserInfo
+	var info strs.UserReg
 	if err := c.ShouldBindJSON(&info); err != nil {
 		c.JSON(400, gin.H{"error": "Invalid requestt"})
 		return
 	}
-	ent := sqop.UsRegis(info)
+
+	var reg strs.UserInfo
+	reg.Name = info.Name
+	reg.Email = info.Email
+	reg.Password = info.Password
+	reg.ProfilePic = info.ProfilePic
+	reg.UserName = info.UserName
+
+	check := true
+	var uid string
+	for check {
+		uid = op.RandStringRunes(2) + op.RandNumRunes(4)
+		check = sqop.CheckUserExist(uid)
+	}
+
+	reg.ID = uid
+
+	ent := sqop.UsRegis(reg)
 	if ent {
 		c.Redirect(302, "/login")
 	} else {

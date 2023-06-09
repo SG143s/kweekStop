@@ -95,7 +95,7 @@ func ShProd(c *gin.Context) {
 	session = SessTry(session)
 	var pjson strs.Prods
 	logIn := au.ChAuth(session)
-	sid := c.Param("shop")
+	sid := c.Param("shopid")
 	if !logIn {
 		pjson.Prof.Log = false
 	} else {

@@ -127,3 +127,19 @@ func CheckShopAuth(uid string, pid string) bool {
 
 	return res
 }
+
+func CheckUserExist(uid string) bool {
+	result, err := db.Query("SELECT EXISTS(SELECT 1 FROM users WHERE id = ? LIMIT 1)", uid)
+	if err != nil {
+		panic(err)
+	}
+	var res bool
+	for result.Next() {
+		err = result.Scan(&res)
+		if err != nil {
+			panic(err)
+		}
+	}
+
+	return res
+}
