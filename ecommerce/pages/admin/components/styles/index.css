@@ -1,7 +1,14 @@
-.beranda-page{
+.navbar-left-page{
     display: flex;
     justify-content:flex-start;
     height: 100vh;
+    width: 100%;
+}
+
+.base-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 100%;
 }
 

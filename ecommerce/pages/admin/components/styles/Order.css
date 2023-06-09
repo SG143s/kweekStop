@@ -45,3 +45,59 @@
     padding:5px;
     border-radius: 10px;
 }
+
+.tabel {
+    margin: 3vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    padding: 3px 40px 3px 40px;
+  }
+  
+  .tabel ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .tabel li {
+    display: grid;
+    align-items: center;
+    font-size: 14px;
+    color: #06152B;
+    font-family: 'DM Sans', sans-serif;
+    border-bottom: 1px solid #dcd9d3;
+    padding: 10px 0;
+  }
+
+  .tabel.pengiriman-saya li{
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1rem;
+  }
+
+  .tabel.recent-order li, .tabel.produk li {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+  }
+  
+  .tabel li:first-child {
+    font-weight: bold;
+  }
+  
+  .tabel span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .tabel button {
+    padding: 8px;
+    background-color: #FD9C0B;
+    color: #FFF;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: space-between;
+    margin-right: 8px;
+  }
+  

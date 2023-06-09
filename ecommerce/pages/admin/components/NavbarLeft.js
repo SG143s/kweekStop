@@ -19,18 +19,18 @@ export default function NavbarLeft() {
                     <MdOutlineArrowForwardIos className={`icon-navbar-left-arrow ${isExpanded ? 'expanded' : ''}`}/>
                 </button>
                 <div className="divider"></div>
-                <button className="home-btn">
+                <button className="home-btn" onClick={() => window.location.href = "/admin"}>
                     <AiOutlineHome className={`icon-navbar-left ${isExpanded ? 'expanded' : ''}`}/>
                     <span className={isExpanded ? "icon-text show" : "icon-text"}>Home</span>
                 </button>
-                <button className="products-btn">
+                <button className="products-btn" onClick={() => window.location.href = "/admin/produk"}>
                     <HiOutlineBookmarkAlt className={`icon-navbar-left ${isExpanded ? 'expanded' : ''}`}/>
                     <div className={isExpanded ? "icon-text show" : "icon-text"}>
                         <span>Products</span> 
                         {/* <RiArrowDownSLine/> */}
                     </div>
                 </button>
-                <button className="orders-btn">
+                <button className="orders-btn" onClick={()=> window.location.href = "/admin/order"}>
                     <BsPass className={`icon-navbar-left ${isExpanded ? 'expanded' : ''}`}/>
                     <span className={isExpanded ? "icon-text show" : "icon-text"}>Orders</span>
                 </button>

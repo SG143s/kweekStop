@@ -8,7 +8,7 @@ export default function App(){
     return(
         <div className='container'>
             <Navbar className="navbar"/>
-            <div className="beranda-page">
+            <div className="navbar-left-page">
                 <div className="navbar-left">
                     <NavbarLeft/>
                 </div>

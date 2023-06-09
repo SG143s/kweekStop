@@ -6,6 +6,7 @@ import ProdukSaya from "../components/ProdukSaya";
 import AddProduct from "../components/AddProduct";
 import KategoriProduk from "../components/KategoriProduk";
 import DiskonProduk from "../components/DiskonProduk";
+import "../components/styles/index.css"
 
 export default function ProductPage(params) {
   const [activeComponent, setActiveComponent] = useState("produkSaya");
@@ -28,8 +29,13 @@ export default function ProductPage(params) {
   return (
     <div>
       <Navbar className="navbar" />
-      <HeaderProduct setActiveComponent={setActiveComponent} />
-      {renderComponent()}
+      <div className="navbar-left-page">
+        <NavbarLeft/>
+        <div className = "base-page">
+          <HeaderProduct setActiveComponent={setActiveComponent} />
+          {renderComponent()}
+        </div>
+      </div>
     </div>
   );
 }
