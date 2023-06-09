@@ -180,3 +180,22 @@ func AddProd(c *gin.Context) {
 		}
 	}
 }
+
+func AddShop(c *gin.Context) {
+	session := sessions.Default(c)
+	logIn := au.ChAuth(session)
+	if !logIn {
+		c.JSON(401, gin.H{"error": "User Not Logged In"})
+	} else {
+		uid := session.Get("userId").(string)
+		var info strs.ShopAdd
+		if err := c.ShouldBindJSON(&info); err != nil {
+			c.JSON(400, gin.H{"error": "Invalid request"})
+			return
+		}
+		ent := sqop.AddShop(uid, info)
+		if !ent {
+			c.JSON(400, gin.H{"error": "Invalid request"})
+		}
+	}
+}

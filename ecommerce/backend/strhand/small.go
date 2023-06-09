@@ -55,6 +55,13 @@ type ShopSim struct {
 	Rate float32 `json:"srate"`
 }
 
+type ShopAdd struct {
+	Base    ShopSim `json:"base"`
+	Owner   string  `json:"uid"`
+	Address string  `json:"saddr"`
+	City    string  `json:"scity"`
+}
+
 type ProdCom struct {
 	Base     ProdBase `json:"pbase"`
 	Imgpaths []string `json:"imgpaths"`
@@ -76,6 +83,7 @@ type ProdAdd struct {
 type shopCom struct {
 	Base    ShopSim `json:"sbase"`
 	Address string  `json:"saddr"`
+	City    string  `json:"scity"`
 }
 
 type ProdCart struct {

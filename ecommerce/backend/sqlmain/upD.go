@@ -51,7 +51,7 @@ func AddProd(uid string, prod strs.ProdAdd) bool {
 	var res bool
 
 	if CheckShopAuth(uid, prod.ShopID) {
-		_, err := db.Query("INSERT INTO shop values (?, ?, ?, ?, ?, ?)", prod.ID, prod.ShopID, prod.Name, prod.Desc, prod.Price, prod.Stock)
+		_, err := db.Query("INSERT INTO product values (?, ?, ?, ?, ?, ?)", prod.ID, prod.ShopID, prod.Name, prod.Desc, prod.Price, prod.Stock)
 		res = err == nil
 		if res {
 			_, err := db.Query("INSERT INTO categoryprod values (?, ?)", prod.Category, prod.ID)
@@ -71,4 +71,9 @@ func AddProd(uid string, prod strs.ProdAdd) bool {
 	}
 
 	return res
+}
+
+func AddShop(uid string, shop strs.ShopAdd) bool {
+	_, err := db.Query("INSERT INTO shop values (?, ?, ?, '', ?, ?, ?)", shop.Base.ID, uid, shop.Base.Name, shop.Address, shop.City, shop.Base.Img)
+	return err == nil
 }
