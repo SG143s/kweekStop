@@ -1,7 +1,6 @@
 package spages
 
 import (
-	"fmt"
 	"strconv"
 	"time"
 
@@ -181,8 +180,11 @@ func Checkout(c *gin.Context) {
 			}
 		}
 		tot := int(sqop.GetTotP(paydetid))
-		fmt.Println(tot)
 		res := op.Paytest(paydetid, tot)
+		ent = sqop.DeleteCart(uid)
+		if !ent {
+			c.JSON(400, gin.H{"error": "Unable to delete cart"})
+		}
 		c.Redirect(302, res)
 	}
 }
