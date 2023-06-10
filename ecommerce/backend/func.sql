@@ -354,3 +354,17 @@ SELECT rating, review,
     (SELECT username from users where users.id = userreview.userid)
 FROM userreview join users on userreview.userid = users.id
 WHERE userreview.productid = pid;
+
+checkstockav
+parameter: pid, quan
+
+IF (SELECT stock from product where id = pid) < quan THEN
+    SELECT 0 from product;
+ELSE
+    SELECT 1 from product;
+END IF;
+
+decstock
+parameter: pid, quan
+
+UPDATE product SET stock = stock - quan WHERE id = pid;

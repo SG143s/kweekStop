@@ -143,3 +143,19 @@ func CheckUserExist(uid string) bool {
 
 	return res
 }
+
+func CheckStockAv(pid string, quan int) bool {
+	result, err := db.Query("SELECT EXISTS(SELECT 1 FROM users WHERE id = ? LIMIT 1)", pid, quan)
+	if err != nil {
+		panic(err)
+	}
+	var res bool
+	for result.Next() {
+		err = result.Scan(&res)
+		if err != nil {
+			panic(err)
+		}
+	}
+
+	return res
+}

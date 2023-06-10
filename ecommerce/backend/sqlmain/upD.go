@@ -87,3 +87,8 @@ func DeleteCart(uid string) bool {
 	_, err := db.Query("DELETE FROM cart where userid = ?", uid)
 	return err == nil
 }
+
+func DecStock(pid string, quan int) bool {
+	_, err := db.Query("CALL decstock(?, ?)", pid, quan)
+	return err == nil
+}

@@ -58,9 +58,19 @@ func CartAdd(c *gin.Context) {
 			c.JSON(400, gin.H{"error": "Invalid request"})
 			return
 		}
+		ava := sqop.CheckStockAv(info.ID, info.Quantity)
+		if !ava {
+			c.JSON(400, gin.H{"error": "Quantity exceeded stock"})
+			return
+		}
 		ent := sqop.CartAdd(info, uid)
 		if !ent {
-			c.JSON(400, gin.H{"error": "Invalid request"})
+			c.JSON(400, gin.H{"error": "Unable to add cart"})
+			return
+		}
+		ent = sqop.DecStock(info.ID, info.Quantity)
+		if !ent {
+			c.JSON(400, gin.H{"error": "Unable to decrease stock"})
 			return
 		}
 		c.JSON(200, gin.H{"status": "ok"})
