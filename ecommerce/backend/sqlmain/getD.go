@@ -271,3 +271,89 @@ func Getshprod(sid string) []strs.ProdSim {
 	}
 	return t2
 }
+
+func GetProd(base strs.ProdCom) strs.ProdCom {
+	row, err := db.Query("CALL getprod(?)", base.Base.ID)
+	if err != nil {
+		panic(err)
+	}
+
+	for row.Next() {
+		err := row.Scan(&base.Base.Name, &base.Base.Price, &base.Shop.ID, &base.Desc, &base.Stock, &base.Base.Category, &base.Base.Rating, &base.Base.SReview)
+		if err != nil {
+			panic(err)
+		}
+	}
+	return base
+}
+
+func GetImg(base strs.ProdCom) strs.ProdCom {
+	var temp string
+	row, err := db.Query("SELECT imagepath from productimg where productid = ?", base.Base.ID)
+	if err != nil {
+		panic(err)
+	}
+
+	for row.Next() {
+		err := row.Scan(&temp)
+		if err != nil {
+			panic(err)
+		}
+		base.Imgpaths = append(base.Imgpaths, temp)
+	}
+	return base
+}
+
+func GetShop(base strs.ShopSim) strs.ShopSim {
+	row, err := db.Query("CALL getshopsmall(?)", base.ID)
+	if err != nil {
+		panic(err)
+	}
+
+	for row.Next() {
+		err := row.Scan(&base.Name, &base.Rate)
+		if err != nil {
+			panic(err)
+		}
+	}
+	return base
+}
+
+func GetRelateprod(pid string) []strs.ProdSim {
+	var t1 strs.ProdSim
+	var t2 []strs.ProdSim
+
+	row, err := db.Query("CALL getrelateprod(?)", pid)
+	if err != nil {
+		panic(err)
+	}
+
+	for row.Next() {
+		err := row.Scan(&t1.Base.ID, &t1.Base.Name, &t1.Base.Price, &t1.Base.Category, &t1.Base.Rating, &t1.Base.SReview, &t1.Imgpath)
+		if err != nil {
+			panic(err)
+		}
+		t1.DisPrice = t1.Base.Price
+		t2 = append(t2, t1)
+	}
+	return t2
+}
+
+func GetRev(pid string) []strs.Reviews {
+	var t1 strs.Reviews
+	var t2 []strs.Reviews
+
+	row, err := db.Query("CALL getprodrev(?)", pid)
+	if err != nil {
+		panic(err)
+	}
+
+	for row.Next() {
+		err := row.Scan(&t1.UserName, &t1.Rating, &t1.Review)
+		if err != nil {
+			panic(err)
+		}
+		t2 = append(t2, t1)
+	}
+	return t2
+}

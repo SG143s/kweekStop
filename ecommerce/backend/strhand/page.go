@@ -24,11 +24,12 @@ type ProdP struct {
 	Prof  UserTop   `json:"profile"`
 	Base  ProdCom   `json:"pcom"`
 	RelIt []ProdSim `json:"rprod"`
-	Rev   []reviews `json:"prev"`
+	Rev   []Reviews `json:"prev"`
 }
 
 type Shop struct {
 	Prof  UserTop   `json:"profile"`
+	Own   bool      `json:"ownstat"`
 	Sh    shopCom   `json:"shopD"`
 	SProd []ProdSim `json:"sProd"`
 }

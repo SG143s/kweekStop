@@ -104,3 +104,31 @@ func ShProd(c *gin.Context) {
 	pjson = op.ProdShop(pjson, sid)
 	c.JSON(200, pjson)
 }
+
+func ShopSh(c *gin.Context) {
+	session := sessions.Default(c)
+	session = SessTry(session)
+	var pjson strs.Shop
+	logIn := session.Get("loggedIn")
+	if logIn == false {
+		pjson.Prof.Log = false
+	} else {
+		pjson.Prof = sqop.GetUserIn(session.Get("userId").(string))
+	}
+
+}
+
+func Prod(c *gin.Context) {
+	session := sessions.Default(c)
+	session = SessTry(session)
+	var pjson strs.ProdP
+	logIn := session.Get("loggedIn")
+	if logIn == false {
+		pjson.Prof.Log = false
+	} else {
+		pjson.Prof = sqop.GetUserIn(session.Get("userId").(string))
+	}
+	pjson.Base.Base.ID = c.Param("id")
+	pjson = op.ProdPGen(pjson)
+	c.JSON(200, pjson)
+}

@@ -25,3 +25,12 @@ func ProdShop(base strs.Prods, sid string) strs.Prods {
 
 	return base
 }
+
+func ProdPGen(base strs.ProdP) strs.ProdP {
+	base.Base = sq.GetProd(base.Base)
+	base.Base = sq.GetImg(base.Base)
+	base.Base.Shop = sq.GetShop(base.Base.Shop)
+	base.RelIt = sq.GetRelateprod(base.Base.Base.ID)
+	base.Rev = sq.GetRev(base.Base.Base.ID)
+	return base
+}

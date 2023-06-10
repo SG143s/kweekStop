@@ -52,7 +52,7 @@ type CatLink struct {
 	Img  string `json:"cimg"`
 }
 
-type reviews struct {
+type Reviews struct {
 	UserName string  `json:"uname"`
 	Rating   float32 `json:"urate"`
 	Review   string  `json:"urev"`
@@ -77,6 +77,7 @@ type ProdCom struct {
 	Imgpaths []string `json:"imgpaths"`
 	Desc     string   `json:"pdesc"`
 	Shop     ShopSim  `json:"sbase"`
+	Stock    int      `json:"pstock"`
 }
 
 type ProdAdd struct {

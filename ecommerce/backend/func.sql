@@ -282,3 +282,75 @@ FROM product
 join cart on product.id = cart.productid
 join productimg on productimg.productid = product.id
 WHERE cart.userid = uid;
+
+getrelateprodsmall
+parameter:pid
+SELECT DISTINCT product.id, productname, price, 
+(select name from category where category.id = (select categoryid from categoryprod where productid = product.id limit 1) limit 1) as cat, 
+(ifnull((SELECT ROUND(AVG(rating), 2) from userreview where productid = product.id limit 1), 0)) as rate, 
+(SELECT count(review) from userreview where productid = product.id limit 1) as srev,
+(SELECT imagepath from productimg where productid = product.id limit 1) as img
+FROM product join userreview on product.id = userreview.productid  
+join productimg on productimg.productid = product.id
+join categoryprod on categoryprod.productid = product.id
+join category on category.id = categoryprod.categoryid
+WHERE categoryprod.categoryid = (SELECT categoryprod.categoryid FROM categoryprod where categoryprod.productid = pid)
+OR product.shopid = (SELECT product.shopid FROM product WHERE product.id = pid)
+limit 10;
+
+getrelateprod
+parameter:pid
+SELECT DISTINCT product.id, productname, price, 
+(select name from category where category.id = (select categoryid from categoryprod where productid = product.id limit 1) limit 1) as cat, 
+(ifnull((SELECT ROUND(AVG(rating), 2) from userreview where productid = product.id limit 1), 0)) as rate, 
+(SELECT count(review) from userreview where productid = product.id limit 1) as srev,
+(SELECT imagepath from productimg where productid = product.id limit 1) as img
+FROM product join userreview on product.id = userreview.productid  
+join productimg on productimg.productid = product.id
+join categoryprod on categoryprod.productid = product.id
+join category on category.id = categoryprod.categoryid
+WHERE categoryprod.categoryid = (SELECT categoryprod.categoryid FROM categoryprod where categoryprod.productid = pid)
+OR product.shopid = (SELECT product.shopid FROM product WHERE product.id = pid);
+
+getprod
+parameter:pid
+SELECT DISTINCT productname, price, shopid, description, stock,
+(select name from category where category.id = (select categoryid from categoryprod where productid = product.id limit 1) limit 1) as cat, 
+(ifnull((SELECT ROUND(AVG(rating), 2) from userreview where productid = product.id limit 1), 0)) as rate, 
+(SELECT count(review) from userreview where productid = product.id limit 1) as srev
+FROM product join userreview on product.id = userreview.productid  
+join productimg on productimg.productid = product.id
+join categoryprod on categoryprod.productid = product.id
+join category on category.id = categoryprod.categoryid
+WHERE product.id = pid;
+
+getshopsmall
+parameter:sid
+    SELECT DISTINCT
+    shop.shopname,
+    (
+        IFNULL(
+        (SELECT ROUND(AVG(rating), 2)
+        FROM userreview
+        WHERE productid = (
+                SELECT product.id
+                FROM product
+                WHERE shopid = shop.id
+                LIMIT 1
+            )
+        LIMIT 1), 0
+        )
+    )
+    FROM
+        shop
+        JOIN product ON shop.id = product.shopid
+        JOIN userreview ON userreview.productid = product.id
+    WHERE
+        shop.id = sid;
+
+getreview
+parameter:pid
+SELECT rating, review,
+    (SELECT username from users where users.id = userreview.userid)
+FROM userreview join users on userreview.userid = users.id
+WHERE userreview.productid = pid;

@@ -12,11 +12,11 @@ import (
 
 func Start() {
 	r := gin.Default()
-	store := cookie.NewStore([]byte("secret"))
-	r.Use(sessions.Sessions("mysession", store))
 	config := cors.DefaultConfig()
 	config.AllowAllOrigins = true
 	r.Use(cors.New(config))
+	store := cookie.NewStore([]byte("secret"))
+	r.Use(sessions.Sessions("mysession", store))
 
 	r.GET("/", pg.PaHome)
 	r.GET("/products", pg.PaProd)
@@ -24,10 +24,11 @@ func Start() {
 	r.GET("/products/sort/cheap", pg.ChProd)
 	r.GET("/products/sort/popular", pg.PoProd)
 	r.GET("/products/shop/:shopid", pg.ShProd)
-	r.GET("/products/full/:id")
+	r.GET("/products/:id", pg.Prod)
 	r.GET("/logout", au.LogOut)
 	r.GET("/profile", pg.Profile)
 	r.GET("/cart")
+	r.GET("/shop/:id")
 
 	r.POST("/login", au.LogIn)
 	r.POST("/cart/add", pg.CartAdd)
